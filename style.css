@@ -28,7 +28,7 @@
   box-sizing: border-box;
   color: #000000;
   font-family: "FreeSans", sans-serif;
-  font-size: small;
+  font-size: 12px;
   scroll-behavior: smooth;
 }
 
@@ -200,18 +200,18 @@ h1 {
 }
 
 h2 {
-  font-size: small;
+  font-size: 12px;
   font-weight: bold;
 }
 
 h3 {
-  font-size: small;
+  font-size: 12px;
   font-weight: normal;
   text-transform: uppercase;
 }
 
 h4 {
-  font-size: small;
+  font-size: 12px;
   font-weight: normal;
   text-transform: uppercase;
   line-height: 60px;
@@ -240,12 +240,12 @@ details[open] summary {
 }
 
 pre {
-  font-size: small;
+  font-size: 12px;
 }
 
 p {
   color: #777;
-  font-size: small;
+  font-size: 12px;
   line-height: 1.5;
 }
 
@@ -257,8 +257,8 @@ p {
 
 .caption {
   max-width: 100%;
-  text-align: center;
-  font-size: x-small;
+  text-align: left;
+  font-size: 9px;
   font-style: italic;
 }
 
@@ -318,7 +318,7 @@ video {
 footer {
   margin-bottom: 48px;
   text-align: center;
-  font-size: small;
+  font-size: 12px;
 }
 
 nav a:link {
