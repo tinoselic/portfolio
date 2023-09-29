@@ -191,7 +191,7 @@ main {
 }
 
 .gallery-row {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -220,7 +220,6 @@ h4 {
 details {
   padding: 6px;
   box-shadow: 0px 1px;
-  /* border: solid 1px #000; */
 }
 
 details>summary {
@@ -232,6 +231,7 @@ details>summary {
 }
 
 details[open] {
+  /* border: solid 1px #000; */
 }
 
 details[open] summary {
