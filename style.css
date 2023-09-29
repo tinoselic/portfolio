@@ -405,6 +405,18 @@ a:visited {
     background-color: #fff;
   }
 
+  .gallery-row .left {
+    float: left;
+    width: 50%;
+    padding-right: 12px;
+  }
+
+  .gallery-row .right {
+    float: left;
+    width: 50%;
+    padding-left: 12px;
+  }
+
   .column {
     top: 166px;
     float: left;
@@ -417,7 +429,6 @@ a:visited {
     /* Safari */
     position: sticky;
     z-index: 0;
-    /* background-color: white; */
   }
 
   .right {
