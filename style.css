@@ -218,26 +218,49 @@ h4 {
   line-height: 60px;
 }
 
-details {
-  padding: 6px;
+.accordion {
   box-shadow: 0px 1px 0px #c8c8c8;
 }
 
-details>summary {
-  /* font-size: x-large;
-  list-style: none;
-  text-decoration: underline;
-  text-underline-offset: 3px; */
-  margin: 6px 0 6px 0;
+.contentBox {
+  position: relative;
+}
+
+.label {
+  /* font-weight: bold; */
+  padding: 6px 0px 6px 0px;
+  position: relative;
   cursor: pointer;
 }
 
-details[open] {
-  /* border: solid 1px #000; */
+.label::before {
+  /* content: url(assets/add_FILL0_wght400_GRAD0_opsz24.svg); */
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
 }
 
-details[open] summary {
-  margin-bottom: 12px;
+.contentBox.active .label::before {
+  /* content: url(assets/remove_FILL0_wght400_GRAD0_opsz24.svg); */
+  content: '–';
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+}
+
+.content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.contentBox.active .content {
+  height: fit-content;
+  padding: 12px;
 }
 
 pre {
@@ -254,6 +277,10 @@ p {
   color: #000;
   max-width: 100%;
 }
+.title:hover {
+  color: #777;
+}
+
 .caption {
   max-width: 100%;
   text-align: left;
