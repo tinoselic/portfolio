@@ -260,7 +260,7 @@ h4 {
 
 .contentBox.active .content {
   height: fit-content;
-  padding: 12px;
+  padding-top: 12px;
 }
 
 pre {
