@@ -32,14 +32,14 @@ for (let i = 0; i < accordion.length; i++) {
 
 
 // Fade out when scroll
-var fade = document.querySelector('.fade');
+/* var fade = document.querySelector('.fade');
 
 function fadeOutOnScroll(element) {
 	if (!element) {
 		return;
 	}
 
-	/* var distanceToTop = window.scrollY + element.getBoundingClientRect().top; */
+	//var distanceToTop = window.scrollY + element.getBoundingClientRect().top;
 	var distanceToTop = 0;
 	var elementHeight = element.offsetHeight;
 	var scrollTop = document.documentElement.scrollTop;
@@ -60,4 +60,4 @@ function scrollHandler() {
 }
 
 window.addEventListener('scroll', scrollHandler);
-main.style.display = 'block';
+main.style.display = 'block'; */

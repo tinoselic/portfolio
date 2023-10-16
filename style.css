@@ -93,90 +93,15 @@ nav .mainMenu .closeMenu img {
   height: 26px;
 }
 
-.quote {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 500px;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-style: italic;
-  font-size: small;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.slider {
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.slider .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  animation: slider 28s infinite;
-  filter: brightness(0.7);
-}
-
-.slider .slide:nth-child(1) {
-  background-image: url('images/2023_GN_GalerieEstherSchipper_Berlin_ScatteredHorizon_1.jpg');
-  animation-delay: 0s;
-}
-
-.slider .slide:nth-child(2) {
-  background-image: url('images/2019_GN_MMSU_Rijeka_Imminence_1.jpg');
-  animation-delay: -7s;
-}
-
-.slider .slide:nth-child(3) {
-  background-image: url('images/2016_GN_KeilaniemiMetroStation_Espoo_LightWeave_1.jpg');
-  animation-delay: -14s;
-}
-
-.slider .slide:nth-child(4) {
-  background-image: url('images/2021_GN_TimesArtMuseum_Beijing_PneumaticCloud_1.jpg');
-  animation-delay: -21s;
-}
-
-@keyframes slider {
-
-  0%,
-  21%,
-  100% {
-    opacity: 1;
-    animation-timing-function: ease;
-    z-index: 0;
-  }
-
-  25% {
-    opacity: 0;
-    animation-timing-function: step-end;
-    z-index: 0;
-  }
-
-  96% {
-    opacity: 1;
-    animation-timing-function: step-end;
-    z-index: -1;
-  }
-}
-
 main {
   margin: 0px 24px 0px;
   padding-top: 84px;
   display: block;
 }
 
-.fade {
+/* .fade {
   background-color: orangered;
-}
+} */
 
 .headline {
   padding-bottom: 36px;
@@ -227,7 +152,8 @@ h4 {
 }
 
 .label {
-  /* font-weight: bold; */
+  font-weight: bold;
+  /* font-size: x-large; */
   padding: 6px 0px 6px 0px;
   position: relative;
   cursor: pointer;
@@ -238,7 +164,7 @@ h4 {
   content: '+';
   position: absolute;
   top: 50%;
-  right: 6px;
+  right: 3px;
   transform: translateY(-50%);
 }
 
@@ -247,7 +173,7 @@ h4 {
   content: '–';
   position: absolute;
   top: 50%;
-  right: 6px;
+  right: 3px;
   transform: translateY(-50%);
 }
 
