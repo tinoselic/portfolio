@@ -1,4 +1,9 @@
-2001_yokohama images
+2001_yokohama
 
-2003_acid_rain images
-2003_elevation images
+2003_acid_rain
+2003_elevation
+
+2005_paris freq_out
+2005_vertical_led
+
+2006_saopaolo
