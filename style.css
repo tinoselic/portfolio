@@ -154,10 +154,14 @@ h4 {
 .label {
   font-weight: bold;
   /* font-size: x-large; */
-  padding: 6px 0px 6px 0px;
+  padding: 12px 0px 12px 0px;
   position: relative;
   cursor: pointer;
 }
+
+/* .label:hover {
+  border: solid 1px #000;
+} */
 
 .label::before {
   /* content: url(assets/add_FILL0_wght400_GRAD0_opsz24.svg); */
