@@ -63,7 +63,7 @@ nav .openMenu img {
 }
 
 nav .mainMenu {
-  height: 100vh;
+  height: calc(100vh - 60px);
   display: none;
   flex-direction: column;
   justify-content: center;
