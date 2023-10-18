@@ -7,3 +7,9 @@
 2005_vertical_led
 
 2006_saopaolo
+
+2009_moscow
+
+2014_riga
+
+2016_tampere
