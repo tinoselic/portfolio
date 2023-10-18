@@ -3,5 +3,3 @@
 2003_acid_rain
 
 2005_vertical_led
-
-2016_tampere
