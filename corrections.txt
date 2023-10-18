@@ -1,7 +1,6 @@
 2001_yokohama
 
 2003_acid_rain
-2003_elevation
 
 2005_paris freq_out
 2005_vertical_led

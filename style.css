@@ -112,10 +112,6 @@ main {
   margin-bottom: 18px;
 }
 
-.row {
-  margin-bottom: 84px;
-}
-
 .gallery-row {
   margin-bottom: 36px;
 }
@@ -374,6 +370,10 @@ a:visited {
     width: 50%;
     margin-bottom: 0px;
     padding-left: 12px;
+  }
+
+  .row {
+    margin: 81px 0 36px 0;
   }
 
   .column {
