@@ -99,8 +99,7 @@ nav .mainMenu .closeMenu img {
   left: 50%;
   max-width: 500px;
   transform: translate(-50%, -50%);
-  font-style: italic;
-  font-size: small;
+  font-size: medium;
   text-align: center;
   line-height: 1.5;
 }
