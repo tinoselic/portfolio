@@ -4,6 +4,4 @@
 
 2005_vertical_led
 
-2014_riga
-
 2016_tampere
