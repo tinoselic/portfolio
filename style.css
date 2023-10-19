@@ -70,7 +70,7 @@ nav .openMenu img {
 }
 
 nav .mainMenu {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 90px);
   margin-top: 30px;
   display: none;
   flex-direction: column;
@@ -206,7 +206,7 @@ pre {
 }
 
 p {
-  color: #777;
+  color: #999;
   font-size: small;
   line-height: 1.5;
 }
@@ -216,7 +216,7 @@ p {
   max-width: 100%;
 }
 .title:hover {
-  color: #777;
+  color: #999;
 }
 
 .caption {
@@ -227,7 +227,7 @@ p {
 }
 
 i {
-  color: #777;
+  color: #999;
 }
 
 img {
@@ -280,7 +280,7 @@ video {
 }
 
 footer {
-  margin-bottom: 48px;
+  margin: 36px 0 36px 0;
   text-align: center;
   font-size: small;
 }
@@ -290,11 +290,15 @@ nav a:link {
   color: #999;
 }
 
-nav .mainMenu a:hover {
+nav a:hover {
   color: #fff;
 }
 
-nav .mainMenu a:active {
+nav a:active {
+  text-decoration: none;
+}
+
+nav a:visited {
   text-decoration: none;
 }
 
@@ -309,7 +313,8 @@ a:hover {
 }
 
 a:visited {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #999;
 }
 
 @media only screen and (min-width: 796px) {
