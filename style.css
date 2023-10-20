@@ -30,6 +30,7 @@
   font-family: "FreeSans", sans-serif;
   font-size: small;
   scroll-behavior: smooth;
+  cursor: crosshair;
 }
 
 body {
