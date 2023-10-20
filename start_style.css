@@ -116,14 +116,13 @@ video {
 }
 
 .quote {
+  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 500px;
   transform: translate(-50%, -50%);
-  font-size: x-large;
+  font-size: x-small;
   text-align: center;
-  line-height: 1.5;
 }
 
 .slider {
