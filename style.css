@@ -28,7 +28,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: "FreeSans", sans-serif;
-  font-size: small;
+  font-size: 12px;
   scroll-behavior: smooth;
   cursor: crosshair;
 }
@@ -213,7 +213,6 @@ p {
 }
 
 .title {
-  color: #000;
   max-width: 100%;
 }
 .title:hover {
