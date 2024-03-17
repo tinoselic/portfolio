@@ -28,9 +28,9 @@
   box-sizing: border-box;
   color: #fff;
   font-family: "FreeSans", sans-serif;
-  font-size: 12px;
+  font-size: small;
   scroll-behavior: smooth;
-  cursor: crosshair;
+  /* cursor: crosshair; */
 }
 
 body {
