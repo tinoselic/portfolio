@@ -47,20 +47,20 @@ nav {
 }
 
 nav .logo {
-  margin-top: 17px;
+  margin-top: 24px;
   padding-left: 24px;
   width: fit-content;
 }
 
 nav .logo img {
-  height: 26px;
+  height: 40px;
   cursor: pointer;
 }
 
 nav .openMenu {
   display: block;
   position: absolute;
-  top: 17px;
+  top: 24px;
   right: 24px;
 }
 
@@ -72,7 +72,7 @@ nav .openMenu img {
 
 nav .mainMenu {
   height: calc(100vh - 90px);
-  margin-top: 30px;
+  margin-top: 24px;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -92,7 +92,7 @@ nav .mainMenu li a {
 nav .mainMenu .closeMenu {
   display: block;
   position: absolute;
-  top: 17px;
+  top: 24px;
   right: 24px;
   cursor: pointer;
 }
@@ -104,7 +104,7 @@ nav .mainMenu .closeMenu img {
 
 main {
   margin: 0px 24px 0px;
-  padding-top: 84px;
+  padding-top: 115px;
   display: block;
 }
 
@@ -125,7 +125,7 @@ main {
   margin-bottom: 18px;
 }
 
-.gallery-row {
+.project {
   margin-bottom: 36px;
 }
 
@@ -214,9 +214,7 @@ p {
 
 .title {
   max-width: 100%;
-}
-.title:hover {
-  color: #999;
+  color: #fff;
 }
 
 .caption {
@@ -378,6 +376,7 @@ nav a:visited {
 
 a:link {
   text-decoration: underline;
+  /* text-underline-offset: 3px; */
   color: #fff;
 }
 
@@ -388,7 +387,7 @@ a:hover {
 
 a:visited {
   text-decoration: underline;
-  color: #999;
+  color: #fff;
 }
 
 @media only screen and (min-width: 796px) {
@@ -448,22 +447,8 @@ a:visited {
     background-color: #fff;
   }
 
-  .gallery-row .left {
-    float: left;
-    width: 50%;
-    margin-bottom: 0px;
-    padding-right: 12px;
-  }
-
-  .gallery-row .right {
-    float: left;
-    width: 50%;
-    margin-bottom: 0px;
-    padding-left: 12px;
-  }
-
   .row {
-    margin: 81px 0 36px 0;
+    margin: 0px 0 36px 0;
   }
 
   .column {

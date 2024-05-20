@@ -2,6 +2,7 @@
 const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
+const main = document.querySelector('main');
 const nav = document.querySelector('nav');
 
 openMenu.addEventListener('click', showNav);
@@ -10,12 +11,14 @@ closeMenu.addEventListener('click', closeNav);
 function showNav() {
 	mainMenu.style.display = 'block';
 	openMenu.style.display = 'none';
+	main.style.display = 'none';
 	nav.style.backgroundColor = 'rgba(0, 0, 0, 1)';
 }
 
 function closeNav() {
 	mainMenu.style.display = 'none';
 	openMenu.style.display = 'block';
+	main.style.display = 'block';
 	nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
 }
 
