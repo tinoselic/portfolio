@@ -9,17 +9,17 @@ openMenu.addEventListener('click', showNav);
 closeMenu.addEventListener('click', closeNav);
 
 function showNav() {
+	nav.style.backgroundColor = 'rgba(0, 0, 0, 1)';
 	mainMenu.style.display = 'block';
 	openMenu.style.display = 'none';
 	main.style.display = 'none';
-	nav.style.backgroundColor = 'rgba(0, 0, 0, 1)';
 }
 
 function closeNav() {
+	nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
 	mainMenu.style.display = 'none';
 	openMenu.style.display = 'block';
 	main.style.display = 'block';
-	nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
 }
 
 
