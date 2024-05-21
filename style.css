@@ -40,7 +40,6 @@ body {
 nav {
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
-  height: fit-content;
   width: 100%;
   top: 0;
   z-index: 2;
@@ -71,7 +70,7 @@ nav .openMenu img {
 }
 
 nav .mainMenu {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 93px);
   margin-top: 24px;
   display: none;
   flex-direction: column;
@@ -103,8 +102,7 @@ nav .mainMenu .closeMenu img {
 }
 
 main {
-  margin: 0px 24px 0px;
-  padding-top: 115px;
+  margin: 115px 24px 0px;
   display: block;
 }
 
@@ -130,17 +128,17 @@ main {
 }
 
 h1 {
-  font-size: large;
+  font-size: x-large;
   font-weight: normal;
 }
 
 h2 {
-  font-size: small;
-  font-weight: bold;
+  font-size: large;
+  font-weight: normal;
 }
 
 h3 {
-  font-size: small;
+  font-size: medium;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -149,7 +147,6 @@ h4 {
   font-size: small;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 60px;
 }
 
 .accordion {
@@ -240,6 +237,8 @@ img:hover {
 }
 
 video {
+  display: flex;
+  justify-content: center;
 }
 
 .background-video {
@@ -257,7 +256,7 @@ video {
 .responsive-video {
   position: relative;
   width: 100%;
-  height: 0;
+  height: auto;
   padding-bottom: 56.25%;
   background-color: #000;
 }
@@ -267,7 +266,7 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .responsive-video iframe {
@@ -275,7 +274,7 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .quote {
@@ -284,7 +283,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 15px;
+  font-size: small;
   line-height: 1.5;
   text-align: center;
 }
@@ -367,7 +366,7 @@ nav a:hover {
 }
 
 nav a:active {
-  text-decoration: none;
+  color: #fff;
 }
 
 nav a:visited {
@@ -386,8 +385,7 @@ a:hover {
 }
 
 a:visited {
-  text-decoration: underline;
-  color: #fff;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 796px) {
@@ -425,26 +423,15 @@ a:visited {
     display: none;
   }
 
-  .background-video {
-    width: 100%;
-    height: auto;
-  }
-
-  .responsive-video video {
-    position: absolute;
-  }
-
   main {
-    margin: 0 48px;
+    margin: 115px 48px 0px;
   }
 
   .headline {
-    position: fixed;
-    top: 60px;
-    padding-top: 24px;
+    top: 72px;
     width: calc(50% - 48px);
     z-index: 1;
-    background-color: #fff;
+    background-color: #000;
   }
 
   .row {
@@ -459,9 +446,9 @@ a:visited {
 
   .left {
     padding-right: 12px;
-    position: -webkit-sticky;
+    /* position: -webkit-sticky;
     /* Safari */
-    position: sticky;
+    /* position: sticky; */
     z-index: 0;
   }
 
@@ -522,7 +509,7 @@ a:visited {
   }
 
   main {
-    margin: 0 250px;
+    margin: 115px 250px 0px;
   }
 
   .headline {
@@ -544,7 +531,7 @@ a:visited {
   }
 
   main {
-    margin: 0 400px;
+    margin: 115px 400px 0px;
   }
 
   .headline {
