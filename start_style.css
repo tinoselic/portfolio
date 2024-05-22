@@ -140,11 +140,11 @@ video {
 
 .background-video {
   position: fixed;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
-  width: auto;
+  /* height: 100%;
+  width: auto; */
   user-select: none;
   pointer-events: none;
   filter: brightness(0.6);
@@ -162,7 +162,7 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .responsive-video iframe {
@@ -170,7 +170,7 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .quote {

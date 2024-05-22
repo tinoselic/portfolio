@@ -255,6 +255,7 @@ video {
   position: relative;
   width: 100%;
   height: auto;
+  padding-bottom: 56.25%;
   background-color: #000;
 }
 
@@ -263,7 +264,7 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .responsive-video iframe {
@@ -271,7 +272,7 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .quote {
