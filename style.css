@@ -115,6 +115,10 @@ main {
   margin-bottom: 36px;
 }
 
+.about-row {
+  margin-bottom: 36px;
+}
+
 .column {
   width: 100%;
   margin-bottom: 18px;
@@ -409,6 +413,12 @@ a:visited {
   }
 
   .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .about-row::after {
     content: "";
     display: table;
     clear: both;
