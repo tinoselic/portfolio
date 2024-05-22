@@ -299,18 +299,18 @@ nav a:hover {
   color: #fff;
 }
 
-nav a:active {
-  color: #fff;
-}
-
 nav a:visited {
   text-decoration: none;
+  color: #999;
+}
+
+nav a:visited:hover {
+  color: #fff;
 }
 
 a:link {
   text-decoration: underline;
   text-underline-offset: 2px;
-  color: #fff;
 }
 
 a:hover {
