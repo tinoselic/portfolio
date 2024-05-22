@@ -112,12 +112,13 @@ main {
 }
 
 .row {
-  margin: 0px 0 36px 0;
+  margin-bottom: 36px;
 }
 
 .column {
   width: 100%;
   margin-bottom: 18px;
+  position:initial
 }
 
 .project {
@@ -370,11 +371,11 @@ a:visited {
   }
 
   .row {
-    margin: 0px 0 36px 0;
+    margin: 196px 0 36px 0;
   }
 
   .column {
-    top: 166px;
+    top: 196px;
     float: left;
     width: 50%;
   }
@@ -407,12 +408,6 @@ a:visited {
   }
 
   .row::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .gallery-row::after {
     content: "";
     display: table;
     clear: both;
