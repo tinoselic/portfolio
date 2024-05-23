@@ -85,8 +85,7 @@ nav .mainMenu li {
 }
 
 nav .mainMenu li a {
-  font-size: x-large;
-  line-height: 72px;
+  line-height: 60px;
 }
 
 nav .mainMenu .closeMenu {
@@ -130,8 +129,9 @@ main {
 }
 
 h1 {
-  font-size: x-large;
+  font-size: small;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 h2 {
