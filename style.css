@@ -135,12 +135,12 @@ h1 {
 }
 
 h2 {
-  font-size: large;
-  font-weight: normal;
+  font-size: small;
+  font-weight: bold;
 }
 
 h3 {
-  font-size: medium;
+  font-size: small;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -148,7 +148,6 @@ h3 {
 h4 {
   font-size: small;
   font-weight: normal;
-  text-transform: uppercase;
 }
 
 .accordion {
@@ -369,7 +368,8 @@ a:visited {
 
   .headline {
     position: fixed;
-    top: 96px;
+    top: 84px;
+    padding-top: 12px;
     width: calc(50% - 48px);
     z-index: 1;
     background-color: #000;
