@@ -41,14 +41,14 @@ nav {
   background-color: rgba(0, 0, 0, 1);
   position: fixed;
   width: 100%;
-  height: 88px;
+  height: 76px;
   top: 0;
   z-index: 2;
 }
 
 nav .logo {
-  margin-top: 24px;
-  padding-left: 24px;
+  margin-top: 18px;
+  padding-left: 18px;
   width: fit-content;
 }
 
@@ -60,8 +60,8 @@ nav .logo img {
 nav .openMenu {
   display: block;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 26px;
+  right: 18px;
 }
 
 nav .openMenu img {
@@ -72,7 +72,7 @@ nav .openMenu img {
 
 nav .mainMenu {
   height: calc(100vh - 93px);
-  margin-top: 24px;
+  margin-top: 18px;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +81,7 @@ nav .mainMenu {
 }
 
 nav .mainMenu li {
-  padding-left: 24px;
+  padding-left: 18px;
 }
 
 nav .mainMenu li a {
@@ -91,8 +91,8 @@ nav .mainMenu li a {
 nav .mainMenu .closeMenu {
   display: block;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 18px;
+  right: 18px;
   cursor: pointer;
 }
 
@@ -102,7 +102,7 @@ nav .mainMenu .closeMenu img {
 }
 
 main {
-  margin: 112px 24px 0px;
+  margin: 112px 18px 0px;
   display: block;
 }
 

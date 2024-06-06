@@ -46,8 +46,8 @@ nav {
 }
 
 nav .logo {
-  margin-top: 24px;
-  padding-left: 24px;
+  margin-top: 18px;
+  padding-left: 18px;
   width: fit-content;
 }
 
@@ -59,8 +59,8 @@ nav .logo img {
 nav .openMenu {
   display: block;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 18px;
+  right: 18px;
 }
 
 nav .openMenu img {
@@ -71,7 +71,7 @@ nav .openMenu img {
 
 nav .mainMenu {
   height: calc(100vh - 93px);
-  margin-top: 24px;
+  margin-top: 18px;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +80,7 @@ nav .mainMenu {
 }
 
 nav .mainMenu li {
-  padding-left: 24px;
+  padding-left: 18px;
 }
 
 nav .mainMenu li a {
@@ -90,8 +90,8 @@ nav .mainMenu li a {
 nav .mainMenu .closeMenu {
   display: block;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 18px;
+  right: 18px;
   cursor: pointer;
 }
 
