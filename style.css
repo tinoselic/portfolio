@@ -126,7 +126,6 @@ main {
 
 h1 {
   font-size: small;
-  font-weight: normal;
   text-transform: uppercase;
 }
 
@@ -201,7 +200,7 @@ pre {
 }
 
 p {
-  color: #999;
+  /* color: #999; */
   font-size: small;
   line-height: 1.5;
 }
@@ -218,9 +217,9 @@ p {
   font-style: italic;
 }
 
-i {
+/* i {
   color: #999;
-}
+} */
 
 img {
   max-width: 100%;
