@@ -41,7 +41,7 @@ nav {
   background-color: rgba(0, 0, 0, 1);
   position: fixed;
   width: 100%;
-  height: 76px;
+  height: 90px;
   top: 0;
   z-index: 2;
 }
@@ -102,22 +102,22 @@ nav .mainMenu .closeMenu img {
 }
 
 main {
-  margin: 76px 18px 0px;
+  margin: 0px 18px 0px;
+  padding-top: 90px;
   display: block;
 }
 
 .headline {
-  padding: 36px 0 36px;
+  padding-bottom: 36px;
 }
 
 .row {
-  margin-bottom: 36px;
+  margin-bottom: 60px;
 }
 
 .column {
   width: 100%;
-  margin-bottom: 18px;
-  position:initial
+  padding-bottom: 18px;
 }
 
 .project {
@@ -144,6 +144,32 @@ h4 {
   font-size: small;
   font-weight: normal;
 }
+
+pre {
+  font-size: small;
+}
+
+p {
+  /* color: #999; */
+  font-size: small;
+  line-height: 1.5;
+}
+
+.title {
+  max-width: 100%;
+  color: #fff;
+}
+
+.caption {
+  max-width: 100%;
+  text-align: left;
+  font-size: x-small;
+  font-style: italic;
+}
+
+/* i {
+  color: #999;
+} */
 
 .accordion {
   box-shadow: 0px 1px 0px #c8c8c8;
@@ -195,32 +221,6 @@ h4 {
   padding-top: 12px;
 }
 
-pre {
-  font-size: small;
-}
-
-p {
-  /* color: #999; */
-  font-size: small;
-  line-height: 1.5;
-}
-
-.title {
-  max-width: 100%;
-  color: #fff;
-}
-
-.caption {
-  max-width: 100%;
-  text-align: left;
-  font-size: x-small;
-  font-style: italic;
-}
-
-/* i {
-  color: #999;
-} */
-
 img {
   max-width: 100%;
   margin-left: auto;
@@ -230,6 +230,14 @@ img {
 img:hover {
   filter: brightness(0.8);
   /* cursor: zoom-in; */
+}
+
+img.gallery {
+  filter: grayscale(100%);
+}
+
+img.gallery:hover {
+  filter: grayscale(0%);
 }
 
 video {
@@ -292,17 +300,15 @@ footer {
 
 nav a:link {
   text-decoration: none;
-  color: #fff;
+  color: #999;
 }
 
 nav a:hover {
   color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 nav a:visited {
-  text-decoration: none;
+  color: #999;
 }
 
 nav a:visited:hover {
@@ -321,6 +327,10 @@ a:hover {
 
 a:visited {
   color: #fff;
+}
+
+a:visited:hover {
+  color: #999;
 }
 
 @media only screen and (min-width: 796px) {
@@ -359,19 +369,20 @@ a:visited {
   }
 
   main {
-    margin: 76px 48px 0px;
+    margin: 0px 48px 0px;
   }
 
   .headline {
     position: fixed;
-    top: 60px;
     width: calc(50% - 48px);
+    top: 90px;
+    padding-top: 0px;
     z-index: 1;
     background-color: #000;
   }
 
   .row {
-    margin: 196px 0 36px 0;
+    margin-top: 90px;
   }
 
   .column {
@@ -414,7 +425,7 @@ a:visited {
   }
 
   p {
-    max-width: 500px;
+    max-width: 600px;
     text-align: justify;
     text-justify: inter-word;
   }
@@ -439,7 +450,7 @@ a:visited {
   }
 
   main {
-    margin: 76px 250px 0px;
+    margin: 0px 250px 0px;
   }
 
   .headline {
@@ -461,7 +472,7 @@ a:visited {
   }
 
   main {
-    margin: 76px 400px 0px;
+    margin: 0px 400px 0px;
   }
 
   .headline {
