@@ -1,15 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P2</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
+  <style>
+    @font-face {
+  font-family: "FreeSans";
+  src: url("fonts/FreeSans.woff") format('woff');
+}
+
+@font-face {
+  font-family: "FreeSans";
+  src: url("fonts/FreeSansBold.woff") format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "FreeSans";
+  src: url("fonts/FreeSansBoldOblique.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "FreeSans";
+  src: url("fonts/FreeSansOblique.woff") format('woff');
+  font-style: italic;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "FreeSans", sans-serif;
+  font-size: small;
+  scroll-behavior: smooth;
+  /* cursor: crosshair; */
+}
+
+body {
+  background: #000;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+nav .logo {
+  margin-top: 18px;
+  padding-left: 18px;
+  width: fit-content;
+}
+
+nav .logo img {
+  height: 40px;
+  cursor: pointer;
+}
+
+nav .openMenu {
+  display: block;
+  position: absolute;
+  top: 26px;
+  right: 18px;
+}
+
+nav .openMenu img {
+  height: 26px;
+  cursor: pointer;
+  filter: invert();
+}
+
+nav .mainMenu {
+  height: 100vh;
+  margin-top: 18px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: top 1s ease;
+}
+
+nav .mainMenu li {
+  padding-left: 18px;
+}
+
+nav .mainMenu li a {
+  line-height: 60px;
+}
+
+nav .mainMenu .closeMenu {
+  display: block;
+  position: absolute;
+  top: 26px;
+  right: 18px;
+}
+
+nav .mainMenu .closeMenu img {
+  height: 26px;
+  cursor: pointer;
+  filter: invert();
+}
+
+nav a:link {
+  text-decoration: none;
+  color: #999;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:visited {
+  color: #999;
+}
+
+nav a:visited:hover {
+  color: #fff;
+}
+
+a:link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #999;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:visited:hover {
+  color: #999;
+}
+
+video {
+  display: flex;
+  justify-content: center;
+}
+
+.background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* height: 100%;
+  width: auto; */
+  user-select: none;
+  pointer-events: none;
+  filter: brightness(0.6);
+}
+
+.responsive-video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+.responsive-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.quote {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: small;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+}
+
+@media only screen and (min-width: 796px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav .logo {
+    padding-left: 48px;
+  }
+
+  nav .openMenu {
+    display: none;
+  }
+
+  nav .mainMenu {
+    margin-top: 0px;
+    padding: 0px 48px 0px 0px;
+    height: fit-content;
+    flex-wrap: wrap;
+    display: inline-block;
+  }
+
+  nav .mainMenu li {
+    display: inline-block;
+  }
+  
+  nav .mainMenu li a {
+    font-size: small;
+    line-height: 76px;
+  }
+
+  nav .mainMenu .closeMenu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  nav .logo {
+    padding-left: 250px;
+  }
+
+  nav .mainMenu {
+    margin-top: 0px;
+    padding-right: 250px;
+  }
+
+  nav .mainMenu li {
+    padding-left: 36px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  nav .logo {
+    padding-left: 400px;
+  }
+
+  nav .mainMenu {
+    padding-right: 400px;
+  }
+
+  nav .mainMenu li {
+    padding-left: 48px;
+  }
+}
+  </style>
+  <title>Tino Selić</title>
 </head>
+
 <body>
-    Hallo Welt
+  <header>
+    <nav>
+      <div class="logo"><a href="index.html"><img src="assets/logo.svg" alt=""></a></div>
+      <div class="openMenu"><img src="assets/menu_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
+      <ul class="mainMenu">
+        <li><a href="pages/work.html">Work</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <div class="closeMenu"><img src="assets/close_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
+      </ul>
+    </nav>
+  </header>
+  <!-- <div class="slider">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div> -->
+  <div class="background-video">
+    <video src="videos/20230817_PortfolioBackgroundVideo.mp4" frameBorder="0" autoplay muted loop>
+    </video>
+  </div>
+  <div class="quote">
+    Hallo. My name is Tino Selic, and I'm a Helsinki-based digital artist and designer.
+  </div>
+  <script src="app.js"></script>
 </body>
 
-<script></script>
-
-<style></style>
 </html>
