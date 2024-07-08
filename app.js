@@ -32,6 +32,12 @@ for (let i = 0; i < accordion.length; i++) {
 	});	
 }
 
+// Footer
+document.addEventListener("DOMContentLoaded", function() {
+    var footer = document.getElementById("copyright");
+    var footerText = "© 2024 Tino Selic";
+    footer.textContent = footerText;
+});
 
 // Fade out when scroll
 /* var fade = document.querySelector('.fade');
