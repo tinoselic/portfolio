@@ -156,6 +156,8 @@ p {
 }
 
 .title {
+  font-size: x-small;
+  font-style: italic;
   max-width: 100%;
   color: #fff;
 }
