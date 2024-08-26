@@ -383,6 +383,10 @@ a:visited:hover {
     background-color: #000;
   }
 
+  .project {
+    margin-bottom: 60px;
+  }
+
   .row {
     padding-top: 123px;
   }
