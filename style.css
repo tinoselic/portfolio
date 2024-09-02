@@ -125,33 +125,24 @@ main {
 }
 
 h1 {
-  font-size: small;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: small;
   font-weight: bold;
 }
 
 h3 {
-  font-size: small;
   font-weight: normal;
   text-transform: uppercase;
 }
 
 h4 {
-  font-size: small;
   font-weight: normal;
 }
 
-pre {
-  font-size: small;
-}
-
 p {
-  /* color: #999; */
-  font-size: small;
+  color: #999;
   line-height: 1.5;
 }
 
@@ -169,9 +160,9 @@ p {
   font-style: italic;
 }
 
-/* i {
+i {
   color: #999;
-} */
+}
 
 .accordion {
   box-shadow: 0px 1px 0px #c8c8c8;
@@ -361,9 +352,8 @@ a:visited:hover {
   nav .mainMenu li {
     display: inline-block;
   }
-  
+
   nav .mainMenu li a {
-    font-size: small;
     line-height: 76px;
   }
 
@@ -431,7 +421,7 @@ a:visited:hover {
   }
 
   p {
-    max-width: 600px;
+    max-width: 800px;
     text-align: justify;
     text-justify: inter-word;
   }
@@ -465,6 +455,14 @@ a:visited:hover {
 }
 
 @media only screen and (min-width: 1920px) {
+  * {
+    font-size: large;
+  }
+
+  footer {
+    font-size: small;
+  }
+
   nav .logo {
     padding-left: 400px;
   }
@@ -483,6 +481,14 @@ a:visited:hover {
 
   .headline {
     width: calc(50% - 400px);
+  }
+
+  .row {
+    padding-top: 144px;
+  }
+
+  .column {
+    top: 221px;
   }
 
   .about-column-left {
