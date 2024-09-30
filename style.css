@@ -122,6 +122,50 @@ main {
 
 .project {
   margin-bottom: 36px;
+  position: relative;
+}
+
+.project a:link {
+  text-decoration: none;
+}
+
+img.gallery {
+  filter: brightness(1);
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.text-box {
+  transition: .5s ease;
+  position: absolute;
+  width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  /* border: solid #fff; */
+}
+
+.project:hover .gallery {
+  filter: brightness(0.3);
+  cursor: pointer;
+}
+
+.project:hover .text-box {
+  opacity: 1;
+}
+
+.project-title {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.project-subtitle {
+  color: #999;
 }
 
 h1 {
@@ -223,15 +267,6 @@ img {
 img:hover {
   filter: brightness(0.8);
   cursor: zoom-in;
-}
-
-img.gallery {
-  filter: grayscale(100%);
-}
-
-img.gallery:hover {
-  filter: grayscale(0%);
-  cursor: pointer;
 }
 
 video {
@@ -452,6 +487,14 @@ a:visited:hover {
   .headline {
     width: calc(50% - 250px);
   }
+
+  .project-title {
+    font-size: x-large;
+  }
+  
+  .project-subtitle {
+    font-size: x-large;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -465,6 +508,14 @@ a:visited:hover {
 
   footer {
     font-size: small;
+  }
+
+  .project-title {
+    font-size: xx-large;
+  }
+  
+  .project-subtitle {
+    font-size: xx-large;
   }
 
   nav .logo {
