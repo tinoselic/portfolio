@@ -487,14 +487,6 @@ a:visited:hover {
   .headline {
     width: calc(50% - 250px);
   }
-
-  .project-title {
-    font-size: x-large;
-  }
-  
-  .project-subtitle {
-    font-size: x-large;
-  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -511,11 +503,11 @@ a:visited:hover {
   }
 
   .project-title {
-    font-size: xx-large;
+    font-size: medium;
   }
   
   .project-subtitle {
-    font-size: xx-large;
+    font-size: medium;
   }
 
   nav .logo {
