@@ -347,6 +347,7 @@ nav a:visited:hover {
 a:link {
   text-decoration: underline;
   text-underline-offset: 2px;
+  color: #fff;
 }
 
 a:hover {
