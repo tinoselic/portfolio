@@ -457,19 +457,19 @@ a:visited:hover {
 
   p {
     max-width: 800px;
-    text-align: justify;
-    text-justify: inter-word;
+    /* text-align: justify;
+    text-justify: inter-word; */
   }
 }
 
 @media only screen and (min-width: 1280px) {
   nav .logo {
-    padding-left: 250px;
+    padding-left: 300px;
   }
 
   nav .mainMenu {
     margin-top: 0px;
-    padding-right: 250px;
+    padding-right: 300px;
   }
 
   nav .mainMenu li {
@@ -481,11 +481,19 @@ a:visited:hover {
   }
 
   main {
-    margin: 0px 250px 0px;
+    margin: 0px 300px 0px;
   }
 
   .headline {
-    width: calc(50% - 250px);
+    width: calc(50% - 300px);
+  }
+
+  .row {
+    padding-top: 144px;
+  }
+
+  .column {
+    top: 221px;
   }
 }
 
@@ -529,31 +537,15 @@ a:visited:hover {
   .headline {
     width: calc(50% - 400px);
   }
-
-  .row {
-    padding-top: 144px;
-  }
-
-  .column {
-    top: 221px;
-  }
-
-  .about-column-left {
-    width: 70%;
-  }
-
-  .about-column-right {
-    width: 30%;
-  }
 }
 
-@media only screen and (min-width: 3840px) {
+@media only screen and (min-width: 2560px) {
   nav .logo {
-    padding-left: 1000px;
+    padding-left: 600px;
   }
 
   nav .mainMenu {
-    padding-right: 1000px;
+    padding-right: 600px;
   }
 
   nav .mainMenu li {
@@ -561,10 +553,28 @@ a:visited:hover {
   }
 
   main {
-    margin: 0 1000px;
+    margin: 0 600px;
   }
 
   .headline {
-    width: calc(50% - 1000px);
+    width: calc(50% - 600px);
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  nav .logo {
+    padding-left: 800px;
+  }
+
+  nav .mainMenu {
+    padding-right: 800px;
+  }
+
+  main {
+    margin: 0 800px;
+  }
+
+  .headline {
+    width: calc(50% - 800px);
   }
 }
