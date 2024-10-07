@@ -378,7 +378,7 @@ a:visited:hover {
 
   nav .mainMenu {
     margin-top: 0px;
-    padding: 0px 48px 0px 0px;
+    padding-right: 48px;
     height: fit-content;
     flex-wrap: wrap;
     display: inline-block;
