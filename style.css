@@ -28,9 +28,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: "FreeSans", sans-serif;
-  font-size: small;
-  scroll-behavior: smooth;
-  /* cursor: crosshair; */
+  font-size: 14px;
 }
 
 body {
@@ -38,7 +36,7 @@ body {
 }
 
 nav {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #000;
   position: fixed;
   width: 100%;
   height: 76px;
@@ -109,6 +107,7 @@ main {
 
 .headline {
   padding: 36px 0 36px;
+  line-height: 1.5;
 }
 
 .row {
@@ -191,7 +190,7 @@ p {
 }
 
 .title {
-  font-size: x-small;
+  font-size: 12px;
   font-style: italic;
   max-width: 100%;
   color: #fff;
@@ -200,7 +199,7 @@ p {
 .caption {
   max-width: 100%;
   text-align: left;
-  font-size: x-small;
+  font-size: 12px;
   font-style: italic;
 }
 
@@ -316,7 +315,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: small;
+  font-size: 14px;
   line-height: 1.5;
   text-align: center;
 }
@@ -324,7 +323,7 @@ video {
 footer {
   margin: 36px 0 36px 0;
   text-align: center;
-  font-size: x-small;
+  font-size: 12px;
 }
 
 nav a:link {
@@ -515,23 +514,23 @@ a:visited:hover {
 
 @media only screen and (min-width: 2560px) {
   * {
-    font-size: medium;
+    font-size: 16px;
   }
 
   .caption {
-    font-size: small;
+    font-size: 14px;
   }
 
   footer {
-    font-size: small;
+    font-size: 14px;
   }
 
   .project-title {
-    font-size: medium;
+    font-size: 16px;
   }
 
   .project-subtitle {
-    font-size: medium;
+    font-size: 16px;
   }
 
   nav .logo {
