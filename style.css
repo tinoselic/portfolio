@@ -269,7 +269,7 @@ img:hover {
 }
 
 /* Modal (hidden by default) */
-.modal {
+.previewModal {
   display: none;
   position: fixed;
   z-index: 5;
@@ -282,16 +282,12 @@ img:hover {
   justify-content: center;
 }
 
-.modal-content {
-  max-width: 1920px;
-  width: 90%;
-  height: auto;
-  max-height: 90%;
-  transition: .5s ease;
-}
-
 #previewImage {
   object-fit: contain;
+  width: 90%;
+  max-width: 1920px;
+  height: auto;
+  max-height: 90%;
 }
 
 #previewImage:hover {
@@ -505,7 +501,7 @@ a:visited:hover {
     text-justify: inter-word; */
   }
 
-  .modal-content {
+  #previewImage{
     width: 70%;
   }
 }
@@ -533,11 +529,7 @@ a:visited:hover {
   }
 
   .row {
-    padding-top: 132px;
-  }
-
-  .column {
-    top: 221px;
+    padding-top: 140px;
   }
 }
 

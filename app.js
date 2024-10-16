@@ -4,8 +4,9 @@ const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const main = document.querySelector('main');
 const nav = document.querySelector('nav');
-const modal = document.getElementById('previewModal');
-const modalImg = document.getElementById('previewImage');
+const footer = document.getElementById("copyright");
+const modal = document.querySelector('.previewModal');
+const modalImg = document.getElementById("previewImage");
 const thumbnails = document.querySelectorAll('.thumbnail');
 
 openMenu.addEventListener('click', showNav);
@@ -28,7 +29,6 @@ function closeNav() {
 
 // Footer
 document.addEventListener("DOMContentLoaded", function() {
-    var footer = document.getElementById("copyright");
     var footerText = "© 2024 Tino Selić";
     footer.textContent = footerText;
 });
