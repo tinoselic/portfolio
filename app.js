@@ -4,6 +4,9 @@ const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const main = document.querySelector('main');
 const nav = document.querySelector('nav');
+const modal = document.getElementById('previewModal');
+const modalImg = document.getElementById('previewImage');
+const thumbnails = document.querySelectorAll('.thumbnail');
 
 openMenu.addEventListener('click', showNav);
 closeMenu.addEventListener('click', closeNav);
@@ -23,6 +26,33 @@ function closeNav() {
 }
 
 
+// Footer
+document.addEventListener("DOMContentLoaded", function() {
+    var footer = document.getElementById("copyright");
+    var footerText = "© 2024 Tino Selić";
+    footer.textContent = footerText;
+});
+
+
+// Preview Image
+// Add click event to each image
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener('click', function () {
+    modal.style.display = 'flex'; // Show the modal
+    modalImg.src = this.src; // Set the clicked image in the modal
+	document.body.style.overflow = 'hidden';
+  });
+});
+
+// Close the modal when clicking anywhere outside the image or on the close button
+modal.addEventListener('click', function (e) {
+  if (e.target !== modalImg) {
+    modal.style.display = 'none';
+	document.body.style.overflow = 'auto';
+  }
+});
+
+
 // Accordion
 const accordion = document.getElementsByClassName('contentBox');
 
@@ -32,12 +62,6 @@ for (let i = 0; i < accordion.length; i++) {
 	});	
 }
 
-// Footer
-document.addEventListener("DOMContentLoaded", function() {
-    var footer = document.getElementById("copyright");
-    var footerText = "© 2024 Tino Selić";
-    footer.textContent = footerText;
-});
 
 // Fade out when scroll
 /* var fade = document.querySelector('.fade');
