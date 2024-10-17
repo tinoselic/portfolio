@@ -311,9 +311,9 @@ img:hover {
 /* Image Preview Animation */
 #previewImage {  
   -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.3s;
+  -webkit-animation-duration: .5s;
   animation-name: zoom;
-  animation-duration: 0.3s;
+  animation-duration: .5s;
 }
 
 @-webkit-keyframes zoom {
