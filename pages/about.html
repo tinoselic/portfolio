@@ -45,12 +45,22 @@
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 1);
+      background-color: #000;
       position: fixed;
       width: 100%;
       height: 76px;
       top: 0;
       z-index: 2;
+    }
+
+    nav img {
+      opacity: 1;
+      transition: .5s ease;
+      cursor: pointer;
+    }
+
+    nav img:hover {
+      opacity: 0.5;
     }
 
     nav .logo {
@@ -61,7 +71,6 @@
 
     nav .logo img {
       height: 40px;
-      cursor: pointer;
     }
 
     nav .openMenu {
@@ -73,7 +82,6 @@
 
     nav .openMenu img {
       height: 26px;
-      cursor: pointer;
       filter: invert();
     }
 
@@ -104,7 +112,6 @@
 
     nav .mainMenu .closeMenu img {
       height: 26px;
-      cursor: pointer;
       filter: invert();
     }
 
@@ -177,6 +184,10 @@
       margin-right: auto;
     }
 
+    img:hover {
+      transition: .5s ease;
+    }
+
     footer {
       margin: 36px 0 36px 0;
       text-align: center;
@@ -186,10 +197,12 @@
     nav a:link {
       text-decoration: none;
       color: #999;
+      transition: .5s ease;
     }
 
     nav a:hover {
       color: #fff;
+      transition: .5s ease;
     }
 
     nav a:visited {
@@ -198,6 +211,7 @@
 
     nav a:visited:hover {
       color: #fff;
+      transition: .5s ease;
     }
 
     a:link {
@@ -208,6 +222,7 @@
     a:hover {
       text-decoration: underline;
       color: #999;
+      transition: .5s ease;
     }
 
     a:visited {
@@ -216,6 +231,7 @@
 
     a:visited:hover {
       color: #999;
+      transition: .5s ease;
     }
 
     @media only screen and (min-width: 796px) {

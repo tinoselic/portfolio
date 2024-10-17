@@ -52,6 +52,16 @@
       z-index: 2;
     }
 
+    nav img {
+      opacity: 1;
+      transition: .5s ease;
+      cursor: pointer;
+    }
+
+    nav img:hover {
+      opacity: 0.5;
+    }
+
     nav .logo {
       margin-top: 18px;
       padding-left: 18px;
@@ -60,7 +70,6 @@
 
     nav .logo img {
       height: 40px;
-      cursor: pointer;
     }
 
     nav .openMenu {
@@ -72,7 +81,6 @@
 
     nav .openMenu img {
       height: 26px;
-      cursor: pointer;
       filter: invert();
     }
 
@@ -83,7 +91,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: top 1s ease;
     }
 
     nav .mainMenu li {
@@ -103,13 +110,13 @@
 
     nav .mainMenu .closeMenu img {
       height: 26px;
-      cursor: pointer;
       filter: invert();
     }
 
     nav a:link {
       text-decoration: none;
       color: #999;
+      transition: .5s ease;
     }
 
     nav a:hover {
@@ -127,6 +134,7 @@
     a:link {
       text-decoration: underline;
       text-underline-offset: 2px;
+      transition: .5s ease;
     }
 
     a:hover {
@@ -335,7 +343,39 @@
     Hallo. My name is Tino Selić, I am a Helsinki-based digital artist and designer.
   </div>
   <footer id="copyright"></footer>
-  <script src="app.js"></script>
+  <script>
+    const mainMenu = document.querySelector('.mainMenu');
+    const closeMenu = document.querySelector('.closeMenu');
+    const openMenu = document.querySelector('.openMenu');
+    const main = document.querySelector('main');
+    const nav = document.querySelector('nav');
+    const footer = document.getElementById("copyright");
+
+
+    // Nav bar interaction on mobile devices
+    openMenu.addEventListener('click', showNav);
+    closeMenu.addEventListener('click', closeNav);
+
+    function showNav() {
+      nav.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+      mainMenu.style.display = 'block';
+      openMenu.style.display = 'none';
+      main.style.display = 'none';
+    }
+
+    function closeNav() {
+      nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+      mainMenu.style.display = 'none';
+      openMenu.style.display = 'block';
+      main.style.display = 'block';
+    }
+
+    // Footer
+    document.addEventListener("DOMContentLoaded", function () {
+      var footerText = "© 2024 Tino Selić";
+      footer.textContent = footerText;
+    });
+  </script>
 </body>
 
 </html>
