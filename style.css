@@ -168,6 +168,7 @@ img.gallery {
 .project-title {
   color: #fff;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .project-subtitle {
