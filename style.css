@@ -205,8 +205,8 @@ img.gallery {
 
 .project-title {
   color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
+  text-transform: uppercase;  
+  letter-spacing: 1px;
 }
 
 .project-subtitle {
