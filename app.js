@@ -2,10 +2,9 @@ const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const main = document.querySelector('main');
-const nav = document.querySelector('nav');
-const footer = document.getElementById("copyright");
+const footer = document.getElementById('copyright');
 const modal = document.querySelector('.previewModal');
-const modalImg = document.getElementById("previewImage");
+const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 
 // Nav bar interaction on mobile devices
@@ -51,11 +50,11 @@ modal.addEventListener('click', function (e) {
 });
 
 
-// Accordion
+/* // Accordion
 const accordion = document.getElementsByClassName('contentBox');
 
 for (let i = 0; i < accordion.length; i++) {
 	accordion[i].addEventListener('click', function () {
 		this.classList.toggle('active');
 	});
-}
+} */
