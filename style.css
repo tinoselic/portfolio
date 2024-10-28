@@ -42,12 +42,12 @@ nav {
   height: 76px;
   top: 0;
   z-index: 2;
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 nav img {
   opacity: 1;
-  transition: .5s ease;
+  transition: .3s ease;
   cursor: pointer;
 }
 
@@ -106,6 +106,44 @@ nav .mainMenu .closeMenu img {
   filter: invert();
 }
 
+nav a:link {
+  text-decoration: none;
+  color: #999;
+  transition: .3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:visited {
+  color: #999;
+}
+
+nav a:visited:hover {
+  color: #fff;
+}
+
+a:link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #fff;
+  transition: .3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #999;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:visited:hover {
+  color: #999;
+}
+
 main {
   margin: 0px 18px 0px;
   padding-top: 76px;
@@ -140,12 +178,12 @@ img.gallery {
   display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
+  transition: .3s ease;
   backface-visibility: hidden;
 }
 
 .text-box {
-  transition: .5s ease;
+  transition: .3s ease;
   position: absolute;
   width: max-content;
   top: 50%;
@@ -269,7 +307,7 @@ i {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 .thumbnail:hover {
@@ -320,9 +358,9 @@ i {
 /* Image Preview Animation */
 #previewImage {
   -webkit-animation-name: zoom;
-  -webkit-animation-duration: .5s;
+  -webkit-animation-duration: .3s;
   animation-name: zoom;
-  animation-duration: .5s;
+  animation-duration: .3s;
 }
 
 @-webkit-keyframes zoom {
@@ -401,44 +439,6 @@ footer {
   margin: 36px 0 36px 0;
   text-align: center;
   font-size: 12px;
-}
-
-nav a:link {
-  text-decoration: none;
-  color: #999;
-  transition: .5s ease;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-nav a:visited {
-  color: #999;
-}
-
-nav a:visited:hover {
-  color: #fff;
-}
-
-a:link {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  color: #fff;
-  transition: .5s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #999;
-}
-
-a:visited {
-  color: #fff;
-}
-
-a:visited:hover {
-  color: #999;
 }
 
 @media only screen and (min-width: 796px) {
