@@ -1,6 +1,53 @@
 @font-face {
   font-family: "Jost";
-  src: url("fonts/Jost-VariableFont_wght.ttf");
+  src: url("../fonts/Jost-Light.ttf");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-LightItalic.ttf");
+  font-weight: light;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
@@ -33,7 +80,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: "Jost", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -221,11 +268,15 @@ img.gallery {
 }
 
 h1 {
-  text-transform: uppercase;
+  color: #fff;
+  font-weight: normal;
+  text-transform: uppercase;  
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-weight: bold;
+  color: #fff;
+  font-weight: normal;
 }
 
 h3 {
@@ -437,7 +488,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   text-align: center;
 }
@@ -610,11 +661,11 @@ footer {
 
 @media only screen and (min-width: 2560px) {
   * {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .caption {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   footer {

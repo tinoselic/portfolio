@@ -9,7 +9,54 @@
   <style>
     @font-face {
       font-family: "Jost";
-      src: url("../fonts/Jost-VariableFont_wght.ttf");
+      src: url("../fonts/Jost-Light.ttf");
+      font-weight: light;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("../fonts/Jost-LightItalic.ttf");
+      font-weight: light;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("../fonts/Jost-Regular.ttf");
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("../fonts/Jost-Italic.ttf");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("../fonts/Jost-SemiBold.ttf");
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("../fonts/Jost-SemiBoldItalic.ttf");
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("../fonts/Jost-Bold.ttf");
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("../fonts/Jost-BoldItalic.ttf");
+      font-weight: bold;
+      font-style: italic;
     }
 
     @font-face {
@@ -42,7 +89,7 @@
       box-sizing: border-box;
       color: #fff;
       font-family: "Jost", sans-serif;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     body {
@@ -144,12 +191,14 @@
     }
 
     h1 {
-      font-size: 24px;
+      color: #fff;
       font-weight: normal;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     h2 {
+      color: #fff;
       font-weight: normal;
     }
 
@@ -182,6 +231,7 @@
     }
 
     i {
+      font-family: 'Jost Italic';
       color: #999;
     }
 
@@ -389,23 +439,15 @@
 
     @media only screen and (min-width: 2560px) {
       * {
-        font-size: 16px;
+        font-size: 18px;
       }
 
       .caption {
-        font-size: 14px;
+        font-size: 16px;
       }
 
       footer {
         font-size: 14px;
-      }
-
-      .project-title {
-        font-size: 16px;
-      }
-
-      .project-subtitle {
-        font-size: 16px;
       }
 
       nav .logo {
