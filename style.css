@@ -1,51 +1,51 @@
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-Light.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Light.ttf");
   font-weight: light;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-LightItalic.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-LightItalic.ttf");
   font-weight: light;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-Regular.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-Italic.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Italic.ttf");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-SemiBold.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-SemiBold.ttf");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-SemiBoldItalic.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-SemiBoldItalic.ttf");
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-Bold.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Bold.ttf");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-BoldItalic.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-BoldItalic.ttf");
   font-weight: bold;
   font-style: italic;
 }
@@ -79,8 +79,8 @@
   margin: 0;
   box-sizing: border-box;
   color: #fff;
-  font-family: "Jost", "FreeSans", sans-serif;
-  font-size: 16px;
+  font-family: "Poppins", "FreeSans", sans-serif;
+  font-size: 14px;
 }
 
 body {
@@ -488,7 +488,7 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   text-align: center;
 }
@@ -665,7 +665,7 @@ footer {
   }
 
   .caption {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   footer {
@@ -677,7 +677,7 @@ footer {
   }
 
   .project-subtitle {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   nav .logo {
