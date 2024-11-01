@@ -1,13 +1,26 @@
 @font-face {
-  font-family: "Poppins";
-  src: url("fonts/Poppins-Light.ttf");
-  font-weight: light;
+  font-family: "Jost";
+  src: url("fonts/Jost-Regular.ttf");
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("fonts/Poppins-LightItalic.ttf");
-  font-weight: light;
+  font-family: "Jost";
+  src: url("fonts/Jost-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("fonts/Jost-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("fonts/Jost-BoldItalic.ttf");
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -21,19 +34,6 @@
   font-family: "Poppins";
   src: url("fonts/Poppins-Italic.ttf");
   font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("fonts/Poppins-SemiBold.ttf");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("fonts/Poppins-SemiBoldItalic.ttf");
-  font-weight: 600;
   font-style: italic;
 }
 
@@ -79,8 +79,8 @@
   margin: 0;
   box-sizing: border-box;
   color: #fff;
-  font-family: "Poppins", "FreeSans", sans-serif;
-  font-size: 14px;
+  font-family: "Jost", "FreeSans", sans-serif;
+  font-size: 16px;
 }
 
 body {
@@ -138,14 +138,6 @@ nav .mainMenu {
   align-items: center;
 }
 
-nav .mainMenu li {
-  padding-left: 18px;
-}
-
-nav .mainMenu li a {
-  line-height: 60px;
-}
-
 nav .mainMenu .closeMenu {
   display: block;
   position: absolute;
@@ -156,6 +148,15 @@ nav .mainMenu .closeMenu {
 nav .mainMenu .closeMenu img {
   height: 26px;
   filter: invert();
+}
+
+nav .mainMenu li {
+  padding-left: 18px;
+}
+
+nav .mainMenu li a {
+  font-family: "Poppins";
+  line-height: 60px;
 }
 
 nav a:link {
@@ -256,6 +257,7 @@ img.gallery {
 }
 
 .project-title {
+  font-family: "Poppins";
   color: #fff;
   text-transform: uppercase;
   /* font-weight: bold; */  
@@ -268,6 +270,7 @@ img.gallery {
 }
 
 h1 {
+  font-family: "Poppins";
   color: #fff;
   font-weight: normal;
   text-transform: uppercase;  
@@ -275,6 +278,7 @@ h1 {
 }
 
 h2 {
+  font-family: "Poppins";
   color: #fff;
   font-weight: normal;
 }

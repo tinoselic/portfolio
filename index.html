@@ -8,8 +8,55 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
   <style>
     @font-face {
+      font-family: "Jost";
+      src: url("fonts/Jost-Regular.ttf");
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("fonts/Jost-Italic.ttf");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("fonts/Jost-Bold.ttf");
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      src: url("fonts/Jost-BoldItalic.ttf");
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    @font-face {
       font-family: "Poppins";
       src: url("fonts/Poppins-Regular.ttf");
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      src: url("fonts/Poppins-Italic.ttf");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      src: url("fonts/Poppins-Bold.ttf");
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      src: url("fonts/Poppins-BoldItalic.ttf");
+      font-weight: bold;
+      font-style: italic;
     }
 
     @font-face {
@@ -41,8 +88,8 @@
       margin: 0;
       box-sizing: border-box;
       color: #fff;
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
+      font-family: "Jost", "FreeSans", sans-serif;
+      font-size: 16px;
     }
 
     body {
@@ -59,7 +106,7 @@
 
     nav img {
       opacity: 1;
-      transition: .5s ease;
+      transition: .3s ease;
       cursor: pointer;
     }
 
@@ -98,14 +145,6 @@
       align-items: center;
     }
 
-    nav .mainMenu li {
-      padding-left: 18px;
-    }
-
-    nav .mainMenu li a {
-      line-height: 60px;
-    }
-
     nav .mainMenu .closeMenu {
       display: block;
       position: absolute;
@@ -118,10 +157,19 @@
       filter: invert();
     }
 
+    nav .mainMenu li {
+      padding-left: 18px;
+    }
+
+    nav .mainMenu li a {
+      font-family: "Poppins";
+      line-height: 60px;
+    }
+
     nav a:link {
       text-decoration: none;
       color: #999;
-      transition: .5s ease;
+      transition: .3s ease;
     }
 
     nav a:hover {
@@ -139,7 +187,7 @@
     a:link {
       text-decoration: underline;
       text-underline-offset: 2px;
-      transition: .5s ease;
+      transition: .3s ease;
     }
 
     a:hover {
@@ -195,6 +243,7 @@
     }
 
     .quote {
+      font-family: "Poppins";
       margin: 0;
       position: absolute;
       top: 50%;
