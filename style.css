@@ -94,12 +94,12 @@ nav {
   height: 76px;
   top: 0;
   z-index: 2;
-  transition: .3s ease;
+  transition: .5s ease;
 }
 
 nav img {
   opacity: 1;
-  transition: .3s ease;
+  transition: .5s ease;
   cursor: pointer;
 }
 
@@ -163,7 +163,7 @@ nav .mainMenu li a {
 nav a:link {
   text-decoration: none;
   color: #999;
-  transition: .3s ease;
+  transition: .5s ease;
 }
 
 nav a:hover {
@@ -182,7 +182,7 @@ a:link {
   text-decoration: underline;
   text-underline-offset: 2px;
   color: #fff;
-  transition: .3s ease;
+  transition: .5s ease;
 }
 
 a:hover {
@@ -218,26 +218,36 @@ main {
   padding-bottom: 18px;
 }
 
-.project {
-  margin-bottom: 36px;
-  position: relative;
-}
-
-.project a:link {
+.grid a {
   text-decoration: none;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 6px;
+}
+
+.project {
+  aspect-ratio: 1;
+  padding: 6px;
+  position: relative;
+  border: solid 2px #555;
+  transition: .5s ease;
+  overflow: hidden;
+}
+
 img.gallery {
-  filter: brightness(1);
+  filter: grayscale(1);
   display: block;
   width: 100%;
   height: auto;
-  transition: .3s ease;
+  transition: .5s ease;
   backface-visibility: hidden;
 }
 
-.text-box {
-  transition: .3s ease;
+/* .text-box {
+  transition: .5s ease;
   position: absolute;
   width: max-content;
   top: 50%;
@@ -245,29 +255,43 @@ img.gallery {
   transform: translate(-50%, -50%);
   text-align: center;
   opacity: 0;
-  /* border: solid #fff; */
-}
-
-.project:hover .gallery {
-  filter: brightness(0.3);
-  cursor: pointer;
-}
-
-.project:hover .text-box {
-  opacity: 1;
-}
+} */
 
 .project-title {
   font-family: "Poppins";
-  color: #fff;
-  text-transform: uppercase;
-  /* font-weight: bold; */  
+  font-size: 24px;
+  /* font-weight: bold; */
   letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: .5s ease;
+  
 }
 
 .project-subtitle {
+  font-family: "Poppins";
+  color: #555;
+  margin-top: 6px;
+  /* font-size: 14px; */
+  transition: .5s ease;
+}
+
+.project:hover {
+  border: solid 2px #fff;
+}
+
+.project:hover .gallery {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+.project:hover .project-title {
+  color: #fff;
+}
+
+.project:hover .project-subtitle {
   color: #999;
-  font-size: 12px;
 }
 
 h1 {
@@ -370,7 +394,7 @@ i {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  transition: .3s ease;
+  transition: .5s ease;
 }
 
 .thumbnail:hover {
@@ -421,9 +445,9 @@ i {
 /* Image Preview Animation */
 #previewImage {
   -webkit-animation-name: zoom;
-  -webkit-animation-duration: .3s;
+  -webkit-animation-duration: .5s;
   animation-name: zoom;
-  animation-duration: .3s;
+  animation-duration: .5s;
 }
 
 @-webkit-keyframes zoom {
@@ -544,6 +568,10 @@ footer {
     margin: 0px 48px 0px;
   }
 
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .headline {
     position: fixed;
     width: calc(50% - 48px);
@@ -553,7 +581,6 @@ footer {
   }
 
   .project {
-    margin-bottom: 60px;
   }
 
   .row {
@@ -638,8 +665,12 @@ footer {
     padding-top: 140px;
   }
 
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .project-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .project-subtitle {
