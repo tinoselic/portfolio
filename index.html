@@ -8,78 +8,28 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
   <style>
     @font-face {
-      font-family: "Jost";
-      src: url("fonts/Jost-Regular.ttf");
+      font-family: "OverusedGrotesk";
+      src: url("fonts/OverusedGrotesk-Roman.ttf");
       font-weight: normal;
     }
 
     @font-face {
-      font-family: "Jost";
-      src: url("fonts/Jost-Italic.ttf");
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: "Jost";
-      src: url("fonts/Jost-Bold.ttf");
-      font-weight: bold;
-    }
-
-    @font-face {
-      font-family: "Jost";
-      src: url("fonts/Jost-BoldItalic.ttf");
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: "Poppins";
-      src: url("fonts/Poppins-Regular.ttf");
-      font-weight: normal;
-    }
-
-    @font-face {
-      font-family: "Poppins";
-      src: url("fonts/Poppins-Italic.ttf");
+      font-family: "OverusedGrotesk";
+      src: url("fonts/OverusedGrotesk-Italic.ttf");
       font-weight: normal;
       font-style: italic;
     }
 
     @font-face {
-      font-family: "Poppins";
-      src: url("fonts/Poppins-Bold.ttf");
+      font-family: "OverusedGrotesk";
+      src: url("fonts/OverusedGrotesk-Bold.ttf");
       font-weight: bold;
     }
 
     @font-face {
-      font-family: "Poppins";
-      src: url("fonts/Poppins-BoldItalic.ttf");
+      font-family: "OverusedGrotesk";
+      src: url("fonts/OverusedGrotesk-BoldItalic.ttf");
       font-weight: bold;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: "FreeSans";
-      src: url("fonts/FreeSans.woff") format('woff');
-    }
-
-    @font-face {
-      font-family: "FreeSans";
-      src: url("fonts/FreeSansBold.woff") format('woff');
-      font-weight: bold;
-    }
-
-    @font-face {
-      font-family: "FreeSans";
-      src: url("fonts/FreeSansBoldOblique.woff") format('woff');
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: "FreeSans";
-      src: url("fonts/FreeSansOblique.woff") format('woff');
       font-style: italic;
     }
 
@@ -88,7 +38,7 @@
       margin: 0;
       box-sizing: border-box;
       color: #fff;
-      font-family: "Jost", "FreeSans", sans-serif;
+      font-family: "OverusedGrotesk", sans-serif;
       font-size: 16px;
     }
 
@@ -162,9 +112,8 @@
     }
 
     nav .mainMenu li a {
-      font-family: "Poppins";
-      line-height: 96px;
       font-size: 48px;
+      line-height: 96px;
     }
 
     nav a:link {
@@ -244,16 +193,15 @@
     }
 
     .quote {
-      font-family: "Poppins";
+      color: #fff;
+      /* font-weight: bold; */
+      text-transform: uppercase;
       margin: 0;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      color: #fff;
-      /* font-weight: bold; */
-      text-transform: uppercase;
     }
 
     footer {
@@ -330,19 +278,23 @@
 
     @media only screen and (min-width: 2560px) {
       * {
-        font-size: 16px;
+        font-size: 18px;
+      }
+
+      nav .mainMenu li a {
+        font-size: 18px;
       }
 
       .caption {
-        font-size: 14px;
-      }
-
-      .quote {
         font-size: 16px;
       }
 
+      .quote {
+        font-size: 24px;
+      }
+
       footer {
-        font-size: 14px;
+        font-size: 16px;
       }
 
       nav .logo {
