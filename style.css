@@ -171,6 +171,12 @@ main {
   text-decoration: none;
 }
 
+.line {
+  background-color: #555;
+  height: 0.5px;
+  width: 100%;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
