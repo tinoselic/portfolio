@@ -54,6 +54,11 @@ h2 a {
   font-size: inherit;
 }
 
+h2 i {
+  font-size: inherit;
+  color: inherit;
+}
+
 h3 {
   color: #fff;
   font-weight: normal;
@@ -572,7 +577,7 @@ footer {
   }
 
   .row {
-    padding-top: 240px;
+    padding-top: 164px;
   }
 
   .column {
