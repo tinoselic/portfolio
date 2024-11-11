@@ -2,6 +2,7 @@ const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const main = document.querySelector('main');
+const contact = document.getElementById('contact');
 const footer = document.getElementById('copyright');
 const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
@@ -23,6 +24,11 @@ function closeNav() {
 	main.style.display = 'block';
 }
 
+// Contact/Email button interaction
+contact.addEventListener('click', function () {
+	const mailtoLink = 'mailto:tino.selic@gmail.com}';
+    window.location.href = mailtoLink;
+});
 
 // Footer
 document.addEventListener("DOMContentLoaded", function () {
