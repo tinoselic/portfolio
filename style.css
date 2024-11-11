@@ -539,11 +539,11 @@ footer {
   }
 
   .row {
-    padding-top: 140px;
+    padding-top: 240px;
   }
 
   .column {
-    top: 216px;
+    top: 240px;
     float: left;
     width: 50%;
   }
@@ -617,7 +617,7 @@ footer {
   }
 
   .row {
-    padding-top: 140px;
+    
   }
 
   .grid {
