@@ -33,6 +33,80 @@
   font-size: 16px;
 }
 
+h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1;
+  /* text-transform: uppercase;
+  letter-spacing: 1px; */
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: normal;
+  max-width: 800px;
+}
+
+h2 a {
+  font-size: inherit;
+}
+
+h3 {
+  color: #fff;
+  font-weight: normal;
+  padding-bottom: 16px;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+p {
+  color: #999;
+  line-height: 1.5;
+}
+
+.title {
+  font-size: 12px;
+  font-style: italic;
+  max-width: 100%;
+  color: #fff;
+}
+
+.caption {
+  max-width: 100%;
+  text-align: left;
+  font-size: 12px;
+  font-style: italic;
+}
+
+i {
+  color: #999;
+}
+
+a:link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #fff;
+  transition: .5s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #999;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:visited:hover {
+  color: #999;
+}
+
 body {
   background: #000;
 }
@@ -125,26 +199,6 @@ nav a:visited {
 
 nav a:visited:hover {
   color: #fff;
-}
-
-a:link {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  color: #fff;
-  transition: .5s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #999;
-}
-
-a:visited {
-  color: #fff;
-}
-
-a:visited:hover {
-  color: #999;
 }
 
 main {
@@ -245,56 +299,6 @@ img.gallery {
 }
 
 .project:hover .project-subtitle {
-  color: #999;
-}
-
-h1 {
-  color: #fff;
-  font-size: 48px;
-  font-weight: normal;
-  line-height: 1;
-  /* text-transform: uppercase;
-  letter-spacing: 1px; */
-}
-
-h2 {
-  color: #fff;
-  font-size: 24px;
-  line-height: 1.25;
-  font-weight: normal;
-  max-width: 800px;
-}
-
-h3 {
-  color: #fff;
-  font-weight: normal;
-  padding-bottom: 16px;
-}
-
-h4 {
-  font-weight: normal;
-}
-
-p {
-  color: #999;
-  line-height: 1.5;
-}
-
-.title {
-  font-size: 12px;
-  font-style: italic;
-  max-width: 100%;
-  color: #fff;
-}
-
-.caption {
-  max-width: 100%;
-  text-align: left;
-  font-size: 12px;
-  font-style: italic;
-}
-
-i {
   color: #999;
 }
 
