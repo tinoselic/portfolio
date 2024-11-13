@@ -386,6 +386,7 @@ img.gallery {
 #previewImage {
   object-fit: contain;
   width: 100%;
+  max-height: 80%;
 }
 
 #previewImage:hover {
@@ -624,12 +625,6 @@ footer {
     /* text-align: justify;
     text-justify: inter-word; */
   }
-
-  #previewImage {
-    width: auto;
-    max-width: 1920px;
-    height: 80%;
-  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -660,6 +655,12 @@ footer {
 
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #previewImage {
+    width: auto;
+    max-width: 1920px;
+    height: 80%;
   }
 }
 
