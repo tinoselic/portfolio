@@ -401,7 +401,6 @@ img.gallery {
 #closePreview img {
   height: 26px;
   cursor: pointer;
-  filter: invert();
 }
 
 #closePreview:hover {
