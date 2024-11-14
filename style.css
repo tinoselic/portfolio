@@ -240,13 +240,30 @@ main {
   grid-gap: 6px;
 }
 
-.project {
+.highlight-project {
   aspect-ratio: 1;
   padding: 6px;
   position: relative;
   border: solid 2px #555;
   transition: .5s ease;
   overflow: hidden;
+}
+
+.highlight {
+  border: solid 2px #fff;
+}
+
+.highlight .gallery {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+.highlight .project-title {
+  color: #fff;
+}
+
+.highlight .project-subtitle {
+  color: #999;
 }
 
 img.gallery {
@@ -276,7 +293,7 @@ img.gallery {
   letter-spacing: 1px; */
   color: #555;
   line-height: 1;
-  transition: .5s ease;  
+  transition: .5s ease;
 }
 
 .project-subtitle {
@@ -286,23 +303,6 @@ img.gallery {
   color: #555;
   /* font-size: 14px; */
   transition: .5s ease;
-}
-
-.project:hover {
-  border: solid 2px #fff;
-}
-
-.project:hover .gallery {
-  filter: grayscale(0);
-  cursor: pointer;
-}
-
-.project:hover .project-title {
-  color: #fff;
-}
-
-.project:hover .project-subtitle {
-  color: #999;
 }
 
 .accordion {
@@ -560,6 +560,23 @@ footer {
 
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .highlight-project:hover {
+    border: solid 2px #fff;
+  }
+
+  .highlight-project:hover .gallery {
+    filter: grayscale(0);
+    cursor: pointer;
+  }
+
+  .highlight-project:hover .project-title {
+    color: #fff;
+  }
+
+  .highlight-project:hover .project-subtitle {
+    color: #999;
   }
 
   .line {

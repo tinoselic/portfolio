@@ -7,6 +7,7 @@ const footer = document.getElementById('copyright');
 const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
+const projects = document.querySelectorAll('.highlight-project');
 
 // Nav bar interaction on mobile devices
 openMenu.addEventListener('click', showNav);
@@ -29,6 +30,36 @@ contact.addEventListener('click', function () {
 	const mailtoLink = 'mailto:tino.selic@gmail.com}';
     window.location.href = mailtoLink;
 });
+
+
+// Highlight Project on Scroll
+// Options for the Intersection Observer
+const options = {
+    root: null, // Sets the viewport as the root
+    rootMargin: '0px',
+    threshold: 1 // Triggers when 100% of the box is visible
+};
+
+// Callback function for the observer
+function highlightOnScroll(entries, observer) {
+    if (window.innerWidth <= 796) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the highlight class when the element is in view
+                entry.target.classList.add('highlight');
+            } else {
+                // Optionally, remove the highlight when it’s out of view
+                entry.target.classList.remove('highlight');
+            }
+        });
+    }
+}
+
+// Create the observer with the callback and options
+const observer = new IntersectionObserver(highlightOnScroll, options);
+
+// Observe each box
+projects.forEach(box => observer.observe(box));
 
 // Footer
 document.addEventListener("DOMContentLoaded", function () {
