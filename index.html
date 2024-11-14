@@ -209,15 +209,16 @@
     }
 
     .quote {
+      font-size: 48px;
       color: #fff;
       /* font-weight: bold; */
       text-transform: uppercase;
-      margin: 0;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      width: calc(100vw - 36px);
     }
 
     footer {
@@ -271,6 +272,10 @@
         border: solid 2px #999;
         padding: 3px 12px;
       }
+
+      .quote {
+        width: calc(100vw - 96px);
+      }
     }
 
     @media only screen and (min-width: 1280px) {
@@ -287,6 +292,10 @@
         width: 100vw;
         height: auto;
       }
+
+      .quote {
+        width: calc(100vw - 600px);
+      }
     }
 
     @media only screen and (min-width: 1920px) {
@@ -296,6 +305,10 @@
 
       nav .mainMenu {
         padding-right: 400px;
+      }
+
+      .quote {
+        width: calc(100vw - 800px);
       }
     }
 
@@ -310,10 +323,6 @@
 
       .caption {
         font-size: 16px;
-      }
-
-      .quote {
-        font-size: 24px;
       }
 
       footer {
@@ -331,6 +340,10 @@
       nav .mainMenu li {
         padding-left: 72px;
       }
+
+      .quote {
+        width: calc(100vw - 1200px);
+      }
     }
 
     @media only screen and (min-width: 3840px) {
@@ -340,6 +353,10 @@
 
       nav .mainMenu {
         padding-right: 800px;
+      }
+
+      .quote {
+        width: calc(100vw - 1600px);
       }
     }
   </style>

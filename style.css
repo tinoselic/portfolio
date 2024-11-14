@@ -646,10 +646,6 @@ footer {
     width: calc(50% - 300px);
   }
 
-  .row {
-    
-  }
-
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -672,6 +668,14 @@ footer {
 
   main {
     margin: 0px 400px 0px;
+  }
+
+  .project-title {
+    font-size: 36px;
+  }
+
+  .project-subtitle {
+    font-size: 16px;
   }
 
   .headline {
@@ -710,6 +714,14 @@ footer {
 
   main {
     margin: 0 600px;
+  }
+
+  .project-title {
+    font-size: 44px;
+  }
+
+  .project-subtitle {
+    font-size: 18px;
   }
 
   .headline {
