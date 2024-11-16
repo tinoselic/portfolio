@@ -558,6 +558,7 @@ footer {
     color: #999;
     border: solid 2px #999;
     padding: 3px 12px;
+    margin-top: 0px;
   }
 
   main {
