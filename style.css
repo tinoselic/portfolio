@@ -235,7 +235,7 @@ main {
 }
 
 .line {
-  background-color: #555;
+  background-color: #333;
   height: 0.5px;
   width: 100%;
 }
@@ -250,7 +250,7 @@ main {
   aspect-ratio: 1;
   padding: 6px;
   position: relative;
-  border: solid 2px #555;
+  border: solid 2px #333;
   transition: .5s ease;
   overflow: hidden;
 }
@@ -297,7 +297,7 @@ img.gallery {
   /* font-weight: bold; */
   /* text-transform: uppercase;
   letter-spacing: 1px; */
-  color: #555;
+  color: #333;
   line-height: 1;
   transition: .5s ease;
 }
@@ -306,7 +306,7 @@ img.gallery {
   margin-top: 12px;
   font-size: 14px;
   /* font-weight: bold; */
-  color: #555;
+  color: #333;
   /* font-size: 14px; */
   transition: .5s ease;
 }
@@ -369,7 +369,7 @@ img.gallery {
 }
 
 .thumbnail:hover {
-  filter: brightness(0.5);
+  filter: brightness(0.6);
   cursor: zoom-in;
 }
 
