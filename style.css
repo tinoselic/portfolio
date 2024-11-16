@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "Kulture";
+  src: url("fonts/Kulturë\ Type.otf");
+}
+
+@font-face {
   font-family: "OverusedGrotesk";
   src: url("fonts/OverusedGrotesk-Roman.ttf");
   font-weight: normal;
@@ -34,10 +39,11 @@
 }
 
 h1 {
-  color: #fff;
+  font-family: 'Kulture';
   font-size: 48px;
   font-weight: normal;
   line-height: 1;
+  color: #fff;
   /* text-transform: uppercase;
   letter-spacing: 1px; */
 }
