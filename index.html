@@ -214,17 +214,70 @@
       height: 100%;
     }
 
+    .slide-box {
+      /* background-color: #000; */
+      position: absolute;
+      overflow: hidden;
+      display: inline-block;
+      white-space: nowrap;
+      width: 100vw;
+      top: 45dvh;
+      /* top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); */
+    }
+
     .quote {
       font-family: 'Kulture';
       font-size: 48px;
+      /* color: #fff; */
       mix-blend-mode: difference;
-      /* color: #000; */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      width: calc(100vw - 36px);
+      /* width: calc(100vw - 36px); */
+      
+      /* animation properties */
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+
+      -moz-animation: text-slide 10s linear infinite;
+      -webkit-animation: text-slide 10s linear infinite;
+      animation: text-slide 20s linear infinite;
+    }
+
+    /* for Firefox */
+    @-moz-keyframes text-slide {
+      from {
+        -moz-transform: translateX(100%);
+      }
+
+      to {
+        -moz-transform: translateX(-100%);
+      }
+    }
+
+    /* for Chrome */
+    @-webkit-keyframes text-slide {
+      from {
+        -webkit-transform: translateX(100%);
+      }
+
+      to {
+        -webkit-transform: translateX(-100%);
+      }
+    }
+
+    @keyframes text-slide {
+      from {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+      }
+
+      to {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-150%);
+      }
     }
 
     footer {
@@ -279,9 +332,9 @@
         padding: 3px 12px;
       }
 
-      .quote {
+      /* .quote {
         width: calc(100vw - 96px);
-      }
+      } */
     }
 
     @media only screen and (min-width: 1280px) {
@@ -300,7 +353,11 @@
       }
 
       .quote {
-        width: calc(100vw - 600px);
+        /* width: calc(100vw - 600px); */
+        font-size: 96px;
+        -moz-animation: text-slide 30s linear infinite;
+        -webkit-animation: text-slide 30s linear infinite;
+        animation: text-slide 30s linear infinite;
       }
     }
 
@@ -313,9 +370,9 @@
         padding-right: 400px;
       }
 
-      .quote {
+      /* .quote {
         width: calc(100vw - 800px);
-      }
+      } */
     }
 
     @media only screen and (min-width: 2560px) {
@@ -347,9 +404,9 @@
         padding-left: 72px;
       }
 
-      .quote {
+      /* .quote {
         width: calc(100vw - 1200px);
-      }
+      } */
     }
 
     @media only screen and (min-width: 3840px) {
@@ -361,9 +418,9 @@
         padding-right: 800px;
       }
 
-      .quote {
+      /* .quote {
         width: calc(100vw - 1600px);
-      }
+      } */
     }
   </style>
   <title>Tino Selić</title>
@@ -395,11 +452,13 @@
     <video src="videos/20230817_PortfolioBackgroundVideo.mp4" playsinline autoplay muted loop>
     </video>
   </div>
-  <div class="quote">
-    <!-- Hello, hallo, moi :)
-    <br>
-    <br> -->
-    My name is Tino Selic, I am a Helsinki-based digital artist and designer
+  <div class="slide-box">
+    <div class="quote">
+      <!-- Hello, hallo, moi :)
+      <br>
+      <br> -->
+      My name is Tino Selic, I am a Helsinki-based digital artist and designer.
+    </div>
   </div>
   <footer id="copyright"></footer>
   <script>
