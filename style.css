@@ -260,7 +260,7 @@ main {
 }
 
 .highlight .gallery {
-  filter: grayscale(0);
+  filter: grayscale(0) brightness(1);
   cursor: pointer;
 }
 
@@ -273,7 +273,7 @@ main {
 }
 
 img.gallery {
-  filter: grayscale(1);
+  filter: grayscale(1) brightness(0.3) blur(3px);
   display: block;
   width: 100%;
   height: auto;
