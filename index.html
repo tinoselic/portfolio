@@ -187,7 +187,10 @@
       transform: translate(-50%, -50%);
       user-select: none;
       pointer-events: none;
-      filter: brightness(0.6) blur(3px);
+      filter: brightness(0.6) grayscale(1)
+        /*  invert(1) */
+      ;
+      /* display: none; */
     }
 
     .responsive-video {
@@ -218,7 +221,18 @@
       font-size: 64px;
       text-align: center;
       /* color: #fff; */
-      mix-blend-mode: difference;
+      /* mix-blend-mode: difference; */
+      filter: invert();
+
+      background: linear-gradient(90deg, #e1e1e1, #c1c1c1, #f5f5f5, #a1a1a1, #e1e1e1);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow:
+        0px 1px 2px rgba(0, 0, 0, 0.8),
+        0px 2px 4px rgba(0, 0, 0, 0.6),
+        0px 4px 8px rgba(0, 0, 0, 0.4);
+      
       width: 90vw;
       position: absolute;
       top: 50%;
@@ -396,10 +410,7 @@
     </video>
   </div>
   <div class="quote">
-    <!-- Hello, hallo, moi :)
-      <br>
-      <br> -->
-    My name is Tino Selic,<br>I am a Helsinki-based digital artist and designer.
+    My name is Tino Selic, I am a Helsinki-based digital artist and designer.
   </div>
   <footer id="copyright"></footer>
   <script>
