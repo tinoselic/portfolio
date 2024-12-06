@@ -277,6 +277,10 @@ main {
   color: #999;
 }
 
+.highlight .project-description {
+  color: #999;
+}
+
 img.gallery {
   filter: grayscale(1) brightness(0.3) blur(3px);
   display: block;
@@ -298,21 +302,26 @@ img.gallery {
 } */
 
 .project-title {
+  font-family: 'Kulture';
   font-size: 30px;
-  /* font-weight: bold; */
-  /* text-transform: uppercase;
-  letter-spacing: 1px; */
   color: #333;
   line-height: 1;
+  padding-top: 6px;
   transition: .5s ease;
 }
 
 .project-subtitle {
   margin-top: 12px;
   font-size: 14px;
-  /* font-weight: bold; */
   color: #333;
-  /* font-size: 14px; */
+  transition: .5s ease;
+}
+
+.project-description {
+  margin-top: 24px;
+  font-size: 14px;
+  /* text-align: right; */
+  color: #333;
   transition: .5s ease;
 }
 
