@@ -36,6 +36,28 @@
   color: #fff;
   font-family: "OverusedGrotesk", sans-serif;
   font-size: 16px;
+  /* scrollbar-width: thin;
+  scrollbar-color: #fff #000; */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
 
 h1 {
@@ -235,10 +257,6 @@ main {
   max-width: 100%;
 }
 
-.grid a {
-  text-decoration: none;
-}
-
 .line {
   background-color: #333;
   height: 0.5px;
@@ -246,9 +264,20 @@ main {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  height: 100dvh;
+  scrollbar-width: none;
+}
+
+.grid a {
+  text-decoration: none;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .highlight-project {
@@ -580,7 +609,11 @@ footer {
   }
 
   .grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 6px;
+    height: fit-content;
+    scroll-snap-type: none;
   }
 
   .highlight-project:hover {
