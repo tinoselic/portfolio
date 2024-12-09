@@ -47,6 +47,26 @@
       font-size: 16px;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #fff;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+
     body {
       background: #000;
     }
@@ -187,7 +207,9 @@
       transform: translate(-50%, -50%);
       user-select: none;
       pointer-events: none;
-      filter: /* brightness(0.6) */ grayscale(1);
+      filter:
+        /* brightness(0.6) */
+        grayscale(1);
       /* display: none; */
     }
 
