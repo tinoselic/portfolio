@@ -36,6 +36,7 @@
   color: #fff;
   font-family: "OverusedGrotesk", sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
   /* scrollbar-width: thin;
   scrollbar-color: #fff #000; */
 }
