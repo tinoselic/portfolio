@@ -6,397 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
-  <style>
-    @font-face {
-      font-family: "Kulture";
-      src: url("fonts/Kulturë\ Type.otf");
-    }
-
-    @font-face {
-      font-family: "OverusedGrotesk";
-      src: url("fonts/OverusedGrotesk-Roman.ttf");
-      font-weight: normal;
-    }
-
-    @font-face {
-      font-family: "OverusedGrotesk";
-      src: url("fonts/OverusedGrotesk-Italic.ttf");
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: "OverusedGrotesk";
-      src: url("fonts/OverusedGrotesk-Bold.ttf");
-      font-weight: bold;
-    }
-
-    @font-face {
-      font-family: "OverusedGrotesk";
-      src: url("fonts/OverusedGrotesk-BoldItalic.ttf");
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      color: #fff;
-      font-family: "OverusedGrotesk", sans-serif;
-      font-size: 16px;
-    }
-
-    /* width */
-    ::-webkit-scrollbar {
-      width: 2px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-      background: #000;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: #fff;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #999;
-    }
-
-    body {
-      background: #000;
-    }
-
-    nav {
-      background-color: rgba(0, 0, 0, 0);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 2;
-    }
-
-    nav img {
-      opacity: 1;
-      transition: .5s ease;
-      cursor: pointer;
-    }
-
-    nav img:hover {
-      opacity: 0.5;
-    }
-
-    nav .logo {
-      margin-top: 18px;
-      padding-left: 18px;
-      width: fit-content;
-    }
-
-    nav .logo img {
-      height: 40px;
-    }
-
-    nav .openMenu {
-      display: block;
-      position: absolute;
-      top: 26px;
-      right: 18px;
-    }
-
-    nav .openMenu img {
-      height: 26px;
-    }
-
-    nav .mainMenu {
-      height: 100dvh;
-      margin-top: 18px;
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    nav .mainMenu .closeMenu {
-      display: block;
-      position: absolute;
-      top: 26px;
-      right: 18px;
-    }
-
-    nav .mainMenu .closeMenu img {
-      height: 26px;
-    }
-
-    nav .mainMenu li {
-      padding-left: 18px;
-    }
-
-    nav .mainMenu li a {
-      font-size: 48px;
-      line-height: 96px;
-    }
-
-    nav a:link {
-      text-decoration: none;
-      color: #999;
-      transition: .5s ease;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
-    nav a:visited {
-      color: #999;
-    }
-
-    nav a:visited:hover {
-      color: #fff;
-    }
-
-    a:link {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      transition: .5s ease;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #999;
-    }
-
-    a:visited {
-      color: #fff;
-    }
-
-    a:visited:hover {
-      color: #999;
-    }
-
-    .button {
-      font-size: 48px;
-      color: #999;
-      border: solid 2px #999;
-      border-radius: 60px;
-      width: fit-content;
-      margin-top: 30px;
-      padding: 0px 24px 6px 24px;
-      transition-duration: 0.5s;
-    }
-
-    .button:hover {
-      border: solid 2px #fff;
-      background-color: #fff;
-      color: #000;
-      cursor: pointer;
-    }
-
-    video {
-      display: flex;
-      justify-content: center;
-      height: 100dvh;
-    }
-
-    .background-video {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      user-select: none;
-      pointer-events: none;
-      filter:
-        /* brightness(0.6) */
-        grayscale(1);
-      /* display: none; */
-    }
-
-    .responsive-video {
-      position: relative;
-      width: 100%;
-      height: auto;
-      background-color: #000;
-    }
-
-    .responsive-video video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .responsive-video iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .quote {
-      font-family: 'Kulture';
-      font-size: 64px;
-      text-align: center;
-      /* color: #fff; */
-      mix-blend-mode: difference;
-      /* filter: invert(); */
-
-      width: 90vw;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    footer {
-      position: absolute;
-      top: 95%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 12px;
-    }
-
-    @media only screen and (min-width: 796px) {
-      nav {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      nav .logo {
-        padding-left: 48px;
-      }
-
-      nav .openMenu {
-        display: none;
-      }
-
-      nav .mainMenu {
-        margin-top: 0px;
-        padding: 0px 48px 0px 0px;
-        height: fit-content;
-        flex-wrap: wrap;
-        display: inline-block;
-      }
-
-      nav .mainMenu li {
-        display: inline-block;
-        padding-left: 48px;
-      }
-
-      nav .mainMenu li a {
-        font-size: 16px;
-        line-height: 76px;
-      }
-
-      nav .mainMenu .closeMenu {
-        display: none;
-      }
-
-      .button {
-        font-size: 16px;
-        color: #999;
-        border: solid 2px #999;
-        padding: 3px 12px;
-      }
-
-      .quote {
-        width: calc(100vw - 96px);
-      }
-    }
-
-    @media only screen and (min-width: 1280px) {
-      nav .logo {
-        padding-left: 300px;
-      }
-
-      nav .mainMenu {
-        margin-top: 0px;
-        padding-right: 300px;
-      }
-
-      video {
-        width: 100vw;
-        height: auto;
-      }
-
-      .quote {
-        width: calc(100vw - 600px);
-        font-size: 96px;
-      }
-    }
-
-    @media only screen and (min-width: 1920px) {
-      nav .logo {
-        padding-left: 400px;
-      }
-
-      nav .mainMenu {
-        padding-right: 400px;
-      }
-
-      .quote {
-        width: calc(100vw - 800px);
-      }
-    }
-
-    @media only screen and (min-width: 2560px) {
-      * {
-        font-size: 18px;
-      }
-
-      nav .mainMenu li a {
-        font-size: 18px;
-      }
-
-      .caption {
-        font-size: 16px;
-      }
-
-      footer {
-        font-size: 16px;
-      }
-
-      nav .logo {
-        padding-left: 600px;
-      }
-
-      nav .mainMenu {
-        padding-right: 600px;
-      }
-
-      nav .mainMenu li {
-        padding-left: 72px;
-      }
-
-      .quote {
-        width: calc(100vw - 1200px);
-      }
-    }
-
-    @media only screen and (min-width: 3840px) {
-      nav .logo {
-        padding-left: 800px;
-      }
-
-      nav .mainMenu {
-        padding-right: 800px;
-      }
-
-      .quote {
-        width: calc(100vw - 1600px);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
   <title>Tino Selić</title>
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav id="home">
       <div class="logo"><a href="index.html"><img src="assets/logo.svg" alt=""></a></div>
       <div class="openMenu"><img src="assets/menu_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
       <ul class="mainMenu">
@@ -404,66 +20,34 @@
         <li><a href="pages/design.html">Design</a></li>
         <li><a href="pages/about.html">About</a></li>
         <li>
+          <a href="mailto:tino.selic@gmail.com" target="_blank"></a>
           <div class="button" id="contact">Contact</div>
         </li>
         <div class="closeMenu"><img src="assets/close_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
       </ul>
     </nav>
   </header>
-  <!-- <div class="slider">
+  <main>
+    <!-- <div class="slider">
     <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>
   </div> -->
-  <div class="background-video">
-    <video src="videos/20230817_PortfolioBackgroundVideo.mp4" playsinline autoplay muted loop>
-    </video>
-  </div>
-  <div class="quote">
-    My name is Tino Selic, I am a Helsinki-based digital artist and designer.
-  </div>
-  <footer id="copyright"></footer>
-  <script>
-    const mainMenu = document.querySelector('.mainMenu');
-    const closeMenu = document.querySelector('.closeMenu');
-    const openMenu = document.querySelector('.openMenu');
-    const main = document.querySelector('main');
-    const nav = document.querySelector('nav');
-    const contact = document.getElementById('contact');
-    const footer = document.getElementById("copyright");
-
-
-    // Nav bar interaction on mobile devices
-    openMenu.addEventListener('click', showNav);
-    closeMenu.addEventListener('click', closeNav);
-
-    function showNav() {
-      nav.style.backgroundColor = 'rgba(0, 0, 0, 1)';
-      mainMenu.style.display = 'block';
-      openMenu.style.display = 'none';
-      main.style.display = 'none';
-    }
-
-    function closeNav() {
-      nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-      mainMenu.style.display = 'none';
-      openMenu.style.display = 'block';
-      main.style.display = 'block';
-    }
-
-    // Contact/Email button interaction
-    contact.addEventListener('click', function () {
-      const mailtoLink = 'mailto:tino.selic@gmail.com}';
-      window.location.href = mailtoLink;
-    });
-
-    // Footer
-    document.addEventListener("DOMContentLoaded", function () {
-      var footerText = "© 2024 Tino Selić";
-      footer.textContent = footerText;
-    });
-  </script>
+    <div class="background-video">
+      <video src="videos/20230817_PortfolioBackgroundVideo.mp4" playsinline autoplay muted loop>
+      </video>
+    </div>
+    <div class="quote">
+      My name is Tino Selic, I am a Helsinki-based digital artist and designer.
+    </div>
+  </main>
+  <footer id="copyright" style="
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);"></footer>
+  <script src="app.js"></script>
 </body>
 
 </html>

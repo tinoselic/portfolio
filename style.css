@@ -146,6 +146,10 @@ body {
   background: #000;
 }
 
+#home {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 nav {
   background-color: #000;
   position: fixed;
@@ -188,7 +192,7 @@ nav .openMenu img {
 }
 
 nav .mainMenu {
-  height: 100vh;
+  height: 100dvh;
   margin-top: 18px;
   display: none;
   flex-direction: column;
@@ -508,16 +512,23 @@ video {
   cursor: pointer;
 }
 
+video {
+  display: flex;
+  justify-content: center;
+  height: 100dvh;
+}
+
 .background-video {
   position: fixed;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
-  width: auto;
   user-select: none;
   pointer-events: none;
-  filter: brightness(0.6);
+  filter:
+    /* brightness(0.6) */
+    grayscale(1);
+  /* display: none; */
 }
 
 .responsive-video {
@@ -545,14 +556,17 @@ video {
 }
 
 .quote {
-  margin: 0;
+  font-family: 'Kulture';
+  font-size: 64px;
+  text-align: center;
+  /* color: #fff; */
+  mix-blend-mode: difference;
+  /* filter: invert(); */
+  width: 90vw;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: center;
 }
 
 footer {
@@ -694,6 +708,10 @@ footer {
     /* text-align: justify;
     text-justify: inter-word; */
   }
+
+  .quote {
+    width: calc(100vw - 96px);
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -727,6 +745,16 @@ footer {
     max-width: 1920px;
     height: 80%;
   }
+
+  video {
+    width: 100vw;
+    height: auto;
+  }
+
+  .quote {
+    width: calc(100vw - 600px);
+    font-size: 96px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -752,6 +780,10 @@ footer {
 
   .headline {
     width: calc(50% - 400px);
+  }
+
+  .quote {
+    width: calc(100vw - 800px);
   }
 }
 
@@ -799,6 +831,10 @@ footer {
   .headline {
     width: calc(50% - 600px);
   }
+
+  .quote {
+    width: calc(100vw - 1200px);
+  }
 }
 
 @media only screen and (min-width: 3840px) {
@@ -816,5 +852,9 @@ footer {
 
   .headline {
     width: calc(50% - 800px);
+  }
+
+  .quote {
+    width: calc(100vw - 1600px);
   }
 }
