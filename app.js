@@ -1,14 +1,22 @@
+const contact = document.getElementById('contact');
 const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const home = document.getElementById('home');
 const main = document.querySelector('main');
-const contact = document.getElementById('contact');
 const footer = document.getElementById('copyright');
 const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
+
+
+// Contact/Email button interaction
+contact.addEventListener('click', function () {
+	const mailtoLink = 'mailto:tino.selic@gmail.com}';
+	window.location.href = mailtoLink;
+});
+
 
 // Nav bar interaction on mobile devices
 openMenu.addEventListener('click', showNav);
@@ -27,12 +35,6 @@ function closeNav() {
 	main.style.display = 'block';
 	home.style.backgroundColor = 'rgba(0, 0, 0, 0)';
 }
-
-// Contact/Email button interaction
-contact.addEventListener('click', function () {
-	const mailtoLink = 'mailto:tino.selic@gmail.com}';
-	window.location.href = mailtoLink;
-});
 
 
 // Highlight Project on Scroll
