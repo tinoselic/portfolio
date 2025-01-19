@@ -68,7 +68,7 @@ projects.forEach(box => observer.observe(box));
 
 // Footer
 document.addEventListener("DOMContentLoaded", function () {
-	var footerText = "© 2024 Tino Selić";
+	var footerText = "© 2025 Tino Selić";
 	footer.textContent = footerText;
 });
 
