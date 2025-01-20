@@ -272,17 +272,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  height: 100dvh;
-  scrollbar-width: none;
 }
 
 .grid a {
   text-decoration: none;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 }
 
 .highlight-project {
@@ -291,7 +284,6 @@ main {
   position: relative;
   border: solid 2px #333;
   transition: .5s ease;
-  overflow: hidden;
 }
 
 .highlight {
@@ -628,7 +620,6 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-gap: 6px;
     height: fit-content;
-    scroll-snap-type: none;
   }
 
   .highlight-project:hover {
