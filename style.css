@@ -329,24 +329,17 @@ img.gallery {
 
 .project-title {
   font-family: 'Kulture';
-  font-size: 30px;
+  font-size: 40px;
   color: #333;
   line-height: 1;
-  padding-top: 6px;
+  margin-top: 18px;
+  margin-bottom: 30px;
   transition: .5s ease;
 }
 
 .project-subtitle {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #333;
-  transition: .5s ease;
-}
-
-.project-description {
-  margin-top: 24px;
-  font-size: 14px;
   /* text-align: right; */
+  font-size: 16px;
   color: #333;
   transition: .5s ease;
 }
@@ -639,6 +632,11 @@ footer {
     color: #999;
   }
 
+  .project-title {
+    font-size: 30px;
+    margin-bottom: 48px;
+  }
+
   .line {
     height: 1px;
   }
@@ -729,6 +727,10 @@ footer {
 
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .project-title {
+    font-size: 24px;
   }
 
   #previewImage {
