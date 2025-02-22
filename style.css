@@ -316,24 +316,16 @@ img.gallery {
   backface-visibility: hidden;
 }
 
-/* .text-box {
-  transition: .5s ease;
-  position: absolute;
-  width: max-content;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  opacity: 0;
-} */
+.text-box {
+  display: block;
+}
 
 .project-title {
   font-family: 'Kulture';
   font-size: 40px;
   color: #333;
   line-height: 1;
-  margin-top: 18px;
-  margin-bottom: 30px;
+  margin-top: 6px;
   transition: .5s ease;
 }
 
@@ -633,8 +625,7 @@ footer {
   }
 
   .project-title {
-    font-size: 30px;
-    margin-bottom: 48px;
+    font-size: 48px;
   }
 
   .line {
@@ -730,7 +721,7 @@ footer {
   }
 
   .project-title {
-    font-size: 24px;
+    font-size: 36px;
   }
 
   #previewImage {
@@ -764,7 +755,7 @@ footer {
   }
 
   .project-title {
-    font-size: 36px;
+    font-size: 48px;
   }
 
   .project-subtitle {
@@ -814,7 +805,7 @@ footer {
   }
 
   .project-title {
-    font-size: 44px;
+    font-size: 72px;
   }
 
   .project-subtitle {
