@@ -9,6 +9,7 @@ const modal = document.querySelector('.previewModal');
 const modalImg = document.getElementById('previewImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
 const projects = document.querySelectorAll('.highlight-project');
+let isRotated = false;
 
 
 // Contact/Email button interaction
@@ -18,23 +19,22 @@ contact.addEventListener('click', function () {
 });
 
 
-// Nav bar interaction on mobile devices
-openMenu.addEventListener('click', showNav);
-closeMenu.addEventListener('click', closeNav);
+// Nav bar interaction
+openMenu.addEventListener('click', () => {
+	isRotated = !isRotated;
 
-function showNav() {
-	mainMenu.style.display = 'block';
-	openMenu.style.display = 'none';
-	main.style.display = 'none';
-	home.style.backgroundColor = 'rgba(0, 0, 0, 1)';
-}
-
-function closeNav() {
-	mainMenu.style.display = 'none';
-	openMenu.style.display = 'block';
-	main.style.display = 'block';
-	home.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-}
+	if (isRotated) {
+		mainMenu.style.display = 'block';
+		openMenu.style.transform = 'rotate(45deg)';
+		main.style.display = 'none';
+		footer.style.display = 'none';
+	} else {
+		mainMenu.style.display = 'none';
+		openMenu.style.transform = 'rotate(0deg)';
+		main.style.display = 'block';
+		footer.style.display = 'block';
+	}
+});
 
 
 // Highlight Project on Scroll

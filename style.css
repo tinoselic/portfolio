@@ -162,13 +162,7 @@ nav {
 }
 
 nav img {
-  opacity: 1;
-  transition: .5s ease;
   cursor: pointer;
-}
-
-nav img:hover {
-  opacity: 0.5;
 }
 
 nav .logo {
@@ -186,6 +180,7 @@ nav .openMenu {
   position: absolute;
   top: 26px;
   right: 18px;
+  transition: transform .5s ease;
 }
 
 nav .openMenu img {
@@ -199,17 +194,6 @@ nav .mainMenu {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-nav .mainMenu .closeMenu {
-  display: block;
-  position: absolute;
-  top: 26px;
-  right: 18px;
-}
-
-nav .mainMenu .closeMenu img {
-  height: 26px;
 }
 
 nav .mainMenu li {
