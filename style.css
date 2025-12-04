@@ -101,7 +101,7 @@ h4 {
 }
 
 p {
-  color: #999;
+  color: #fff;
   line-height: 1.5;
 }
 
@@ -120,7 +120,7 @@ p {
 }
 
 i {
-  color: #999;
+  color: #fff;
 }
 
 a:link {
@@ -180,7 +180,7 @@ nav .openMenu {
   position: absolute;
   top: 26px;
   right: 18px;
-  transition: transform .5s ease;
+  transition: transform .3s ease;
 }
 
 nav .openMenu img {
@@ -285,11 +285,11 @@ main {
 }
 
 .highlight .project-subtitle {
-  color: #999;
+  color: #fff;
 }
 
 .highlight .project-description {
-  color: #999;
+  color: #fff;
 }
 
 img.gallery {
@@ -608,7 +608,7 @@ footer {
   }
 
   .highlight-project:hover .project-subtitle {
-    color: #999;
+    color: #fff;
   }
 
   /* .project-title {
