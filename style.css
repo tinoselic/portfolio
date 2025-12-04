@@ -308,7 +308,7 @@ img.gallery {
 .project-title {
   /* font-family: 'Kulture'; */
   /* font-size: 40px; */
-  /* font-weight: bold; */
+  font-weight: bold;
   text-transform: uppercase;
   color: #333;
   /* line-height: 1; */
