@@ -488,12 +488,9 @@ video {
   cursor: pointer;
 }
 
-ul.cv {
+ul.cv li {  
   margin-left: 1em;
-}
-
-ul.cv li {
-  padding-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 video {
