@@ -488,6 +488,14 @@ video {
   cursor: pointer;
 }
 
+ul.cv {
+  margin-left: 1em;
+}
+
+ul.cv li {
+  padding-bottom: 2em;
+}
+
 video {
   display: flex;
   justify-content: center;
