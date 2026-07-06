@@ -223,10 +223,61 @@ nav a:visited:hover {
   color: #fff;
 }
 
+.button {
+  font-size: 48px;
+  color: #999;
+  border: solid 2px #999;
+  border-radius: 60px;
+  width: fit-content;
+  margin-top: 30px;
+  padding: 0px 24px 6px 24px;
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  border: solid 2px #fff;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
 main {
   margin: 0px 18px 0px;
   padding-top: 76px;
   display: block;
+}
+
+.filter-container {
+  padding-bottom: 2em;
+}
+
+.filter-button {
+  background-color: transparent;
+  color: #999;
+  transition: .5s ease;
+  border: none;
+  /* border: #fff solid 1px;
+  padding: 0.5em 1em;
+  margin: 0 0.5em 0.5em 0; */
+  text-align: center;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.filter-button.active {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .headline {
@@ -468,24 +519,6 @@ img.gallery {
 video {
   display: flex;
   justify-content: center;
-}
-
-.button {
-  font-size: 48px;
-  color: #999;
-  border: solid 2px #999;
-  border-radius: 60px;
-  width: fit-content;
-  margin-top: 30px;
-  padding: 0px 24px 6px 24px;
-  transition-duration: 0.5s;
-}
-
-.button:hover {
-  border: solid 2px #fff;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
 }
 
 ul.cv li {  
