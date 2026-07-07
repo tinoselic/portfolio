@@ -33,13 +33,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #e9e9e9;
   font-family: "OverusedGrotesk", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
   /* scrollbar-width: thin;
-  scrollbar-color: #fff #000; */
+  scrollbar-color: #e9e9e9 #000; */
 }
 
 /* width */
@@ -54,7 +54,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: #e9e9e9;
 }
 
 /* Handle on hover */
@@ -67,13 +67,13 @@ h1 {
   font-size: 48px;
   font-weight: normal;
   line-height: 1;
-  color: #fff;
+  color: #e9e9e9;
   /* text-transform: uppercase;
   letter-spacing: 1px; */
 }
 
 h2 {
-  color: #fff;
+  color: #e9e9e9;
   font-size: 24px;
   line-height: 1.25;
   font-weight: normal;
@@ -91,7 +91,7 @@ h2 i {
 }
 
 h3 {
-  color: #fff;
+  color: #e9e9e9;
   font-weight: bold;
   padding-bottom: 16px;
 }
@@ -101,7 +101,7 @@ h4 {
 }
 
 p {
-  color: #fff;
+  color: #e9e9e9;
   line-height: 1.5;
 }
 
@@ -109,7 +109,7 @@ p {
   font-size: 12px;
   font-style: italic;
   max-width: 100%;
-  color: #fff;
+  color: #e9e9e9;
 }
 
 .caption {
@@ -120,13 +120,13 @@ p {
 }
 
 i {
-  color: #fff;
+  color: #e9e9e9;
 }
 
 a:link {
   text-decoration: underline;
   text-underline-offset: 2px;
-  color: #fff;
+  color: #e9e9e9;
   transition: .5s ease;
 }
 
@@ -136,7 +136,7 @@ a:hover {
 }
 
 a:visited {
-  color: #fff;
+  color: #e9e9e9;
 }
 
 a:visited:hover {
@@ -212,7 +212,7 @@ nav a:link {
 }
 
 nav a:hover {
-  color: #fff;
+  color: #e9e9e9;
 }
 
 nav a:visited {
@@ -220,7 +220,7 @@ nav a:visited {
 }
 
 nav a:visited:hover {
-  color: #fff;
+  color: #e9e9e9;
 }
 
 .button {
@@ -235,8 +235,8 @@ nav a:visited:hover {
 }
 
 .button:hover {
-  border: solid 2px #fff;
-  background-color: #fff;
+  border: solid 2px #e9e9e9;
+  background-color: #e9e9e9;
   color: #000;
   cursor: pointer;
 }
@@ -256,7 +256,7 @@ main {
   color: #999;
   transition: .5s ease;
   border: none;
-  /* border: #fff solid 1px;
+  /* border: #e9e9e9 solid 1px;
   padding: 0.5em 1em;
   margin: 0 0.5em 0.5em 0; */
   text-align: center;
@@ -269,13 +269,13 @@ main {
 }
 
 .filter-button:hover {
-  color: #fff;
+  color: #e9e9e9;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .filter-button.active {
-  color: #fff;
+  color: #e9e9e9;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -323,7 +323,7 @@ main {
 }
 
 .highlight {
-  border: solid 2px #fff;
+  border: solid 2px #e9e9e9;
 }
 
 .highlight .gallery {
@@ -337,15 +337,15 @@ main {
 }
 
 .highlight .project-title {
-  color: #fff;
+  color: #e9e9e9;
 }
 
 .highlight .project-subtitle {
-  color: #fff;
+  color: #e9e9e9;
 }
 
 .highlight .project-description {
-  color: #fff;
+  color: #e9e9e9;
 }
 
 img.gallery {
@@ -573,7 +573,7 @@ video {
   font-family: 'Kulture';
   font-size: 64px;
   text-align: center;
-  /* color: #fff; */
+  /* color: #e9e9e9; */
   mix-blend-mode: difference;
   /* filter: invert(); */
   width: 90vw;
@@ -645,7 +645,7 @@ footer {
   }
 
   .highlight-project:hover {
-    border: solid 2px #fff;
+    border: solid 2px #e9e9e9;
   }
 
   .highlight-project:hover .gallery {
@@ -659,11 +659,11 @@ footer {
   }
 
   .highlight-project:hover .project-title {
-    color: #fff;
+    color: #e9e9e9;
   }
 
   .highlight-project:hover .project-subtitle {
-    color: #fff;
+    color: #e9e9e9;
   }
 
   /* .project-title {
