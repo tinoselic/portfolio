@@ -424,10 +424,6 @@ img.gallery {
   transition: .5s ease;
 }
 
-#black {
-  color: #000;
-}
-
 .accordion {
   box-shadow: 0px 1px 0px #c8c8c8;
 }
