@@ -85,20 +85,6 @@
           children's perspectives throughout the design process.
           <br>
           <br>
-        </p>
-      </div>
-      <div class="column right">
-        <div class="responsive-video">
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/59SBbXLlMXQ?si=mgt6MNAVpyl0gFUK"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column left">
-        <p>
           By comparing all groups side by side with both the observational camera footage and the OBS screen-recordings
           as well as a timestamp, I found similarities and patterns in their interactions. The main finding of my
           observations was a phenomenon I named “aurora swirl”. When the children held hands and spun in circles, the
@@ -109,10 +95,167 @@
         </p>
       </div>
       <div class="column right">
+        <div class="responsive-video">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/59SBbXLlMXQ?si=mgt6MNAVpyl0gFUK"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br>
         <img src="2026_AURORA_01.jpg" alt="AURORA: Aurora swirl" class="thumbnail">
         <br>
         <br>
         <img src="2026_AURORA_02.jpg" alt="AURORA: Aurora swirls on all groups simultaneously" class="thumbnail">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column left">
+        <h2>Spatial Sensing, Interaction & Visual Design</h2>
+        <br>
+        <br>
+        <p>
+          <b>BP_ZED_Initializer</b>
+          <br>
+          <br>
+          The UE5 blueprint “BP_ZED_Initializer” was included in the example project and contained a wide range of
+          necessary functions and parameters for the ZED 2i to initialise and operate properly. In this file, I tackled
+          the challenge of improving the programme’s performance while maintaining accurate tracking. I set the ZED 2i’s
+          resolution to “HD 1080p” and Frame rate to “30 fps”, as well as the Depth Mode to “Ultra”, so the camera’s
+          image would still be sharp enough to accurately detect users. I further improved performance in the Body
+          Tracking Parameters tab by choosing “Human body fast” as the Detection Model, “Body 18” as the Body Format (18
+          motion tracking points per user), and “Upper body” in the Body Selection. By default, the programme also
+          detected other objects in addition to human bodies, so I restricted the range of detectable objects to humans
+          only by enabling “Index [0] (person)” and disabling the rest (Index [1–6]) under the Object Class Filter in
+          the Object Detection Runtime Parameters.
+          <br>
+          <br>
+        </p>
+      </div>
+      <div class="column right">
+        <img src="Screenshot_UE5_BP_ZED_Initializer_InitParameters.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_BP_ZED_Initializer_DetectionAndTrackingParameters.PNG" alt="" class="thumbnail">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column left">
+        <p>
+          <b>BP_ObjectDetection3D_Visualizer</b>
+          <br>
+          <br>
+          This blueprint was also included in the example project. It receives the ZED 2i’s object detection and 3D
+          coordinates data, creates an ID for each object, and links the blueprint actor “BP_AuroraTrail” that spawns
+          the aurora particle effect at the centre of the bounding box of an object.
+          <br>
+          <br>
+          During user testing, one main issue was that the testers perceived the abrupt disappearance of their auroras
+          as confusing and bad-looking when the programme lost track of them. Initialising a function that would
+          smoothly fade out the aurora trail of a user once they step out of the ZED 2i’s tracking area solved the
+          problem. For this, I created a function called “Fade and Destroy” in the “BP_Aurora Trail” blueprint that
+          would use a “Timeline” and “Lerp” node to drop the “Fade Opacity” parameter of the “M_AuroraParticle” material
+          from 1 to 0 within 1 second before destroying the actor/object. I then integrated the function into the
+          “BP_ObjectDetection3D_ Visualizer” blueprint to make it work.
+          <br>
+          <br>
+          The testers also said that it was hard to tell where the borders of the tracking area were, because at that
+          point the area was only defined by the ZED’s depth range settings, and so the programme would only lose track
+          of users once they were out of the ZED’s sight. In the “BP_ObjectDetection3D_Visualizer”, I found out that the
+          “Break SIObject Data” node included outputs for the “Position X” and “Position Y” values of the tracked users.
+          I used them to define minimum and maximum values. The “Print String” node helped—when connected—to see the
+          position values on screen and detect the values of the desired range.
+          <br>
+          <br>
+          In the early version, the programme created auroras only in a colour that I set manually for every user ID. My
+          goal was that the programme would automatically choose a different colour for each user from a set selection
+          of aurora colours. To achieve this, I created an array of eight colours in the
+          “BP_ObjectDetection3D_Visualizer”. Here, the challenge was how the programme could pick a different colour
+          from the array for every user, but also have a different order every time, so that smaller groups would not
+          only get shades of green. The solution was to shuffle the array with every new start of the programme. In the
+          blueprint, I connected a “Shuffle” node behind the colour array and set up a condition with a “Color Count”
+          variable that would assign the next colour of the array to a new user and start again at element [0] when it
+          reached the end of the array.
+          <br>
+          <br>
+        </p>
+      </div>
+      <div class="column right">
+        <img src="Screenshot_UE5_BP_ObjectDetection3D_Visualizer.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_BP_ObjectDetection3D_Visualizer_LimitDepthRange.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_BP_ObjectDetection3D_Visualizer_ColourArrayShuffle.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_BP_ObjectDetection3D_Visualizer_PickNextColourArray.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column left">
+        <p>
+          <b>AuroraTrail</b>
+          <br>
+          <br>
+          The main Niagara system “NS_AuroraTrail” is designed to simulate the characteristic aurora arcs that will
+          trail the users’ positions. Using the GPU for improved performance, the system spawns ten ribbon particles per
+          second with a size of 300 units and a lifetime of 15 seconds, so that they disappear after a while and clear
+          the screen. The “Scale Ribbon Width” setting creates a smooth fade in and out at the trail’s start and end. In
+          the “Ribbon Renderer” settings of the “NS_AuroraTrail”, I selected “M_AuroraParticle” as the material for the
+          ribbon particles, with “DynamicAuroraMaterial” as the Material User Parameter (which controls the colour of
+          each user’s aurora effect), and “Custom Side Vector” as the “Facing Mode”, so that the particles would align
+          properly to the camera. I chose “Tiled by Distance” as the “UV Mode” in the UV settings to tile the particle
+          materials correctly and blend edges smoothly.
+          <br>
+          <br>
+          I created the blueprint actor “BP_AuroraTrail” from scratch. It contains the particle effect “NS_AuroraTrail”
+          and a method to dynamically change its material colour.
+          <br>
+          <br>
+        </p>
+      </div>
+      <div class="column right">
+        <img src="Screenshot_UE5_NS_AuroraTrail.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_BP_AuroraTrail.PNG" alt="" class="thumbnail">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column left">
+        <p>
+          <b>M_AuroraParticle</b>
+          <br>
+          <br>
+          The material “M_AuroraParticle” is assigned to the ribbon particles of “NS_AuroraTrail”. It gives the aurora
+          effect its luminous colour as well as its translucent and striped texture, simulating what was earlier
+          described as rays. I chose “Blend Mode: Translucent” and “Shading Model: Unlit”, added a “Particle Color”
+          node, and connected its RGB values into the material’s “Emissive Color” channel and its RGBA values into
+          “Opacity”. “AuroraColor” is the dynamic parameter controlling the material colour via the shuffled colour
+          array. Its “Emissive Strength” is multiplied by a value of 100 to make the auroras glow brighter, countering
+          their low opacity. To simulate the motion of the rays, I used “TextureCoordinate”, “OneMinus”, and “Panner”
+          nodes to animate a noise texture. I also used “TextureCoordinate” and “OneMinus” nodes to create opacity
+          gradients for smoother top and bottom edges of the particles. Both are multiplied with the RGBA values of the
+          “Particle Color” node and connected into the material’s “Opacity” channel. The “Fade Opacity” parameter is
+          used in the “Fade and Destroy” function to drop the opacity of the material to 0 when triggered.
+          <br>
+          <br>
+        </p>
+      </div>
+      <div class="column right">
+        <img src="Screenshot_UE5_M_AuroraParticle.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_M_AuroraParticle_AuroraColorParameter.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_M_AuroraParticle_AnimatedTexture1.PNG" alt="" class="thumbnail">
+        <br>
+        <br>
+        <img src="Screenshot_UE5_M_AuroraParticle_FadeOpacity.PNG" alt="" class="thumbnail">
       </div>
     </div>
     <div class="row">
@@ -145,6 +288,8 @@
           The bracelets were made of three different coloured threads, resulting in a total of twenty possible colour
           combinations. To be sure that every participant and other person involved in the workshop gets one friendship
           bracelet, I made two bracelets in each of the twenty colour combinations—a total of forty bracelets.
+          <br>
+          <br>
         </p>
       </div>
       <div class="column right">
@@ -170,33 +315,13 @@
           go there was to witness auroras. Watching auroras by myself was soothing and meditative, but it was even
           better when sharing the joy with the friends I made during this exchange. Gazing at the colourful night sky
           became a social event, creating lasting memories.
-        </p>
-      </div>
-      <div class="column right">
-        <img src="2026_AURORA_09.jpg" alt="AURORA: Still frame" class="thumbnail">
-        <br>
-        <br>
-        <img src="2026_AURORA_10.jpg" alt="AURORA: Still frame" class="thumbnail">
-      </div>
-    </div>
-    <div class="row">
-      <div class="column left">
-        <p>
+          <br>
+          <br>
           Friendships have always been an important part—if not the most important part—of my life. I met my closest
           friends at primary school, in high school, in my Bachelor’s studies, and also during my Master’s studies at
           Aalto University. And so, I desired to have friendship as another central theme in my Master's thesis.
-        </p>
-      </div>
-      <div class="column right">
-        <img src="2026_AURORA_11.jpg" alt="AURORA: Still frame" class="thumbnail">
-        <br>
-        <br>
-        <img src="2026_AURORA_12.jpg" alt="AURORA: Still frame" class="thumbnail">
-      </div>
-    </div>
-    <div class="row">
-      <div class="column left">
-        <p>
+          <br>
+          <br>
           In summer 2021, I eventually moved to Helsinki. Before starting my studies at Aalto University, I started a
           job as an after-school programme instructor at the Helsinki German School in January 2022 for six months. The
           job was motivating and rewarding, as the children were joyful, curious, and full of energy—no day was the
@@ -204,25 +329,35 @@
           Throughout my studies, I developed a passion for interactive experiences besides video games, which was my
           initial motivation to start studying. My favourite tools are 3D software, especially the game engine Unreal
           Engine, which I have used since 2018.
-        </p>
-      </div>
-      <div class="column right">
-        <img src="2026_AURORA_13.jpg" alt="AURORA: Still frame" class="thumbnail">
-        <br>
-        <br>
-        <img src="2026_AURORA_14.jpg" alt="AURORA: Still frame" class="thumbnail">
-      </div>
-    </div>
-    <div class="row">
-      <div class="column left">
-        <p>
+          <br>
+          <br>
           With AURORA, my aim was to create an interactive programme designed for children to participate in a workshop,
           in which they would find creative ways of expressing their friendships through virtual auroras by engaging in
           social and playful interactions as groups. Ultimately, with the results of my project, I want to contribute
           useful insights to the field of embodied interaction with a focus on child-computer interaction (CCI).
+          <br>
+          <br>
         </p>
       </div>
       <div class="column right">
+        <img src="2026_AURORA_09.jpg" alt="AURORA: Still frame" class="thumbnail">
+        <br>
+        <br>
+        <img src="2026_AURORA_10.jpg" alt="AURORA: Still frame" class="thumbnail">
+        <br>
+        <br>
+        <img src="2026_AURORA_11.jpg" alt="AURORA: Still frame" class="thumbnail">
+        <br>
+        <br>
+        <img src="2026_AURORA_12.jpg" alt="AURORA: Still frame" class="thumbnail">
+        <br>
+        <br>
+        <img src="2026_AURORA_13.jpg" alt="AURORA: Still frame" class="thumbnail">
+        <br>
+        <br>
+        <img src="2026_AURORA_14.jpg" alt="AURORA: Still frame" class="thumbnail">
+        <br>
+        <br>
         <img src="2026_AURORA_15.jpg" alt="AURORA: Still frame" class="thumbnail">
         <br>
         <br>
@@ -243,11 +378,15 @@
           <a href="https://www.dsh.fi/de/" target="_blank">Helsinki German School</a>
         </h2>
         <br>
-        <p>Software</p>
+        <p>Hardware & Software</p>
         <h2>
+          Stereolabs ZED 2i
+          <br>
           ZED SDK
           <br>
           Unreal Engine 5
+          <br>
+          Adobe After Effects
         </h2>
       </div>
     </div>
