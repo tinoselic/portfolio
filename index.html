@@ -13,36 +13,52 @@
 <body>
   <header>
     <nav id="home">
-      <div class="logo"><img src="/assets/logo.svg" alt=""></div>
+      <div class="nav-container">
+        <button class="logo" onclick="window.location.href='../../'">
+          <img src="/assets/logo.svg" alt="Logo icon">
+        </button>
+        <!-- <button class="openMenu"><img src="../../assets/cross.svg" alt="Cross icon"></button> -->
+        <div class="mainMenu" id="landing">
+          <a href="/technical-art/">Technical Art & Real-time</a>
+          <a href="/ux-ui-web/">UX/UI & Web</a>
+          <a href="/motion-graphics/">Motion & Graphic Design</a>
+          <a href="/physical-computing/">Physical Computing</a>
+          <a href="/about/">About</a>
+          <button id="contact">Contact</button>
+        </div>
+      </div>
     </nav>
+    <!-- <nav id="home">
+      <div class="logo"><img src="/assets/logo.svg" alt=""></div>
+      <div class="mainMenu" id="landing">
+        <a href="/technical-art/">Technical Art & Real-time</a>
+        <br>
+        <br>
+        <br>
+        <a href="/ux-ui-web/">UX/UI & Web</a>
+        <br>
+        <br>
+        <br>
+        <a href="/motion-graphics/">Motion & Graphic Design</a>
+        <br>
+        <br>
+        <br>
+        <a href="/physical-computing/">Physical Computing</a>
+        <br>
+        <br>
+        <br>
+        <a href="/about/">About</a>
+        <br>
+        <br>
+        <br>
+        <button id="contact" style="margin-top: 0;">Contact</button>
+      </div>
+    </nav> -->
   </header>
   <main>
     <div class="background-video">
       <video src="videos/20260728_PortfolioBackgroundVideo.mp4" playsinline autoplay muted loop>
       </video>
-    </div>
-    <div id="landing">
-      <a href="/technical-art/"><!-- &#8594  -->Technical Art & Real-time</a>
-      <br>
-      <br>
-      <br>
-      <a href="/ux-ui-web/"><!-- &#8594  -->UX/UI & Web</a>
-      <br>
-      <br>
-      <br>
-      <a href="/motion-graphics/"><!-- &#8594  -->Motion & Graphic Design</a>
-      <br>
-      <br>
-      <br>
-      <a href="/physical-computing/"><!-- &#8594  -->Physical Computing</a>
-      <br>
-      <br>
-      <br>
-      <a href="/about/"><!-- &#8594  -->About</a>
-      <br>
-      <br>
-      <br>
-      <button id="contact" style="margin-top: 0;">Contact</button>
     </div>
     <!-- <div class="slider">
     <div class="slide"></div>

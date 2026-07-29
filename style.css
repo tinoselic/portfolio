@@ -143,6 +143,14 @@ a:visited:hover {
   color: #999;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  height: fit-content;
+  width: auto;
+}
+
 body {
   background: #000;
 }
@@ -152,11 +160,11 @@ body {
 }
 
 nav {
+  position: fixed;
   background-color: #000;
-  position: relative;
   width: 100%;
   height: 76px;
-  z-index: 10;
+  z-index: 1000;
   transition: .5s ease;
 }
 
@@ -176,49 +184,59 @@ nav .logo img {
 nav .openMenu {
   display: block;
   position: absolute;
-  top: 26px;
+  top: 18px;
   right: 18px;
   transition: transform .3s ease;
 }
 
 nav .openMenu img {
-  height: 26px;
+  height: 40px;
 }
+
+nav #landing {
+  display: inline-flex;
+  /* mix-blend-mode: difference; */
+}
+
+/* nav #landing a {  
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+} */
 
 nav .mainMenu {
-  height: 100dvh;
-  margin-top: 18px;
+  height: calc(100dvh - 76px);
+  width: 100%;
   display: none;
-  list-style: none;
-  /* flex-direction: column;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  list-style-type: none;
+  overflow: hidden;
+  z-index: 50;
+  text-align: center;
 }
 
-nav .mainMenu li {
-  padding-left: 18px;
-}
-
-nav .mainMenu li a {
+nav .mainMenu a {
+  /* font-weight: bold; */
   font-size: 24px;
-  line-height: 4;
+  line-height: 2;
 }
 
-nav a:link {
-  text-decoration: none;
+nav .mainMenu a:link {
   color: #999;
-  transition: .5s ease;
+  text-decoration: none;
 }
 
-nav a:hover {
+nav .mainMenu a:hover {
   color: #e9e9e9;
 }
 
-nav a:visited {
+nav .mainMenu a:visited {
   color: #999;
 }
 
-nav a:visited:hover {
+nav .mainMenu a:visited:hover {
   color: #e9e9e9;
 }
 
@@ -232,6 +250,8 @@ nav a:visited:hover {
   padding: 4px 16px 6px 16px;
   transition-duration: 0.5s;
   margin-top: 30px;
+  text-align: center;
+  align-items: center;
 }
 
 #contact:hover {
@@ -241,47 +261,14 @@ nav a:visited:hover {
   cursor: pointer;
 }
 
+#active {
+  color: #e9e9e9;
+}
+
 main {
   margin: 0px 18px 0px;
-  /* padding-top: 76px; */
+  padding-top: 76px;
   display: block;
-}
-
-#landing {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  /* margin-top: 3em;
-  padding: 0 1em 0 1em; */
-  z-index: 100;
-  /* mix-blend-mode: difference; */
-}
-
-#landing a {
-  /* font-weight: bold; */
-  font-size: 24px;
-
-}
-
-#landing a:link {
-  color: #999;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 2px;
-}
-
-#landing a:hover {
-  color: #e9e9e9;
-}
-
-#landing a:visited {
-  color: #e9e9e9;
-}
-
-#landing a:visited:hover {
-  color: #999;
 }
 
 .filter-container {
@@ -368,7 +355,7 @@ main {
 }
 
 .highlight .gallery {
-  filter: grayscale(0) brightness(1);  
+  filter: grayscale(0) brightness(1);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
   cursor: pointer;
 }
@@ -668,11 +655,11 @@ footer {
     margin-top: 0px;
   } */
 
-  nav .mainMenu li {
+  /* nav .mainMenu li {
     padding-left: 48px;
-  }
+  } */
 
-  nav .logo {
+  nav button .logo {
     margin-left: 48px;
   }
 
@@ -688,7 +675,7 @@ footer {
     margin: 0px 48px 0px;
   }
 
-  #landing {
+  .mainMenu {
     width: fit-content;
   }
 
@@ -705,6 +692,7 @@ footer {
 
   .highlight-project:hover .gallery {
     filter: grayscale(0);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
     cursor: pointer;
   }
 
@@ -729,13 +717,13 @@ footer {
     height: 1px;
   }
 
-  /* .headline {
-    position: fixed;
-    width: calc(50% - 48px);
+  .headline {
     top: 76px;
+    /* position: fixed;
+    width: calc(50% - 48px);
     z-index: 1;
-    background: linear-gradient(rgba(0 0 0 / 100%) 90px, rgba(255 255 255 / 0%));
-  } */
+    background: linear-gradient(rgba(0 0 0 / 100%) 90px, rgba(255 255 255 / 0%)); */
+  }
 
   .column {
     top: 240px;
@@ -788,9 +776,9 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
-  nav .mainMenu li {
+  /* nav .mainMenu li {
     padding-left: 300px;
-  }
+  } */
 
   nav .logo {
     margin-left: 300px;
@@ -842,9 +830,9 @@ footer {
 }
 
 @media only screen and (min-width: 1920px) {
-  nav .mainMenu li {
+  /* nav .mainMenu li {
     padding-left: 400px;
-  }
+  } */
 
   nav .logo {
     margin-left: 400px;
@@ -892,9 +880,9 @@ footer {
     font-size: 14px;
   }
 
-  nav .mainMenu li {
+  /* nav .mainMenu li {
     padding-left: 600px;
-  }
+  } */
 
   nav .logo {
     margin-left: 600px;
@@ -930,9 +918,9 @@ footer {
 }
 
 @media only screen and (min-width: 3840px) {
-  nav .mainMenu li {
+  /* nav .mainMenu li {
     padding-left: 800px;
-  }
+  } */
 
   nav .logo {
     margin-left: 800px;
