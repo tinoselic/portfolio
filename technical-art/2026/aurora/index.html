@@ -117,16 +117,16 @@
           <b>BP_ZED_Initializer</b>
           <br>
           <br>
-          The UE5 blueprint “BP_ZED_Initializer” was included in the example project and contained a wide range of
-          necessary functions and parameters for the ZED 2i to initialise and operate properly. In this file, I tackled
-          the challenge of improving the programme’s performance while maintaining accurate tracking. I set the ZED 2i’s
-          resolution to “HD 1080p” and Frame rate to “30 fps”, as well as the Depth Mode to “Ultra”, so the camera’s
-          image would still be sharp enough to accurately detect users. I further improved performance in the Body
-          Tracking Parameters tab by choosing “Human body fast” as the Detection Model, “Body 18” as the Body Format (18
-          motion tracking points per user), and “Upper body” in the Body Selection. By default, the programme also
-          detected other objects in addition to human bodies, so I restricted the range of detectable objects to humans
-          only by enabling “Index [0] (person)” and disabling the rest (Index [1–6]) under the Object Class Filter in
-          the Object Detection Runtime Parameters.
+          The blueprint “BP_ZED_Initializer” was included in the “ZEDSamples” project for Unreal Engine 5 provided
+          by Stereolabs and contained a wide range of necessary functions and parameters for the ZED 2i to initialise
+          and operate properly. In this file, I tackled the challenge of improving the programme’s performance while
+          maintaining accurate tracking. I set the ZED 2i’s resolution to “HD 1080p” and Frame rate to “30 fps”, as well
+          as the Depth Mode to “Ultra”, so the camera’s image would still be sharp enough to accurately detect users. I
+          further improved performance in the Body Tracking Parameters tab by choosing “Human body fast” as the
+          Detection Model, “Body 18” as the Body Format (18 motion tracking points per user), and “Upper body” in the
+          Body Selection. By default, the programme also detected other objects in addition to human bodies, so I
+          restricted the range of detectable objects to humans only by enabling “Index [0] (person)” and disabling the
+          rest (Index [1–6]) under the Object Class Filter in the Object Detection Runtime Parameters.
           <br>
           <br>
         </p>
