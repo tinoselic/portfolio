@@ -128,19 +128,21 @@ a:link {
   text-underline-offset: 2px;
   color: #e9e9e9;
   transition: .5s ease;
+  opacity: 100%;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #999;
+  opacity: 60%;
 }
 
 a:visited {
   color: #e9e9e9;
+  opacity: 100%;
 }
 
 a:visited:hover {
-  color: #999;
+  opacity: 60%;
 }
 
 button {
@@ -224,25 +226,27 @@ nav .mainMenu a {
 }
 
 nav .mainMenu a:link {
-  color: #999;
+  opacity: 60%;
   text-decoration: none;
 }
 
 nav .mainMenu a:hover {
   color: #e9e9e9;
+  opacity: 100%;
 }
 
 nav .mainMenu a:visited {
-  color: #999;
+  opacity: 60%;
 }
 
 nav .mainMenu a:visited:hover {
   color: #e9e9e9;
+  opacity: 100%;
 }
 
 #contact {
   font-size: 24px;
-  color: #999;
+  opacity: 60%;
   background: none;
   border: solid 2px #999;
   border-radius: 60px;
@@ -255,6 +259,7 @@ nav .mainMenu a:visited:hover {
 }
 
 #contact:hover {
+  opacity: 100%;
   border: solid 2px #e9e9e9;
   background-color: #e9e9e9;
   color: #000;
@@ -263,6 +268,7 @@ nav .mainMenu a:visited:hover {
 
 #active {
   color: #e9e9e9;
+  opacity: 100%;
 }
 
 main {
@@ -277,7 +283,7 @@ main {
 
 .filter-button {
   background-color: transparent;
-  color: #999;
+  opacity: 60%;
   transition: .5s ease;
   border: none;
   /* border: #e9e9e9 solid 1px;
@@ -649,7 +655,7 @@ footer {
 
   #contact {
     font-size: 16px;
-    color: #999;
+    opacity: 60%;
     border: solid 2px #999;
     padding: 3px 12px;
     margin-top: 0px;
