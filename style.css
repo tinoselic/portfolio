@@ -223,6 +223,7 @@ nav .mainMenu a {
   /* font-weight: bold; */
   font-size: 24px;
   line-height: 2;
+  transition: 0.5s ease;
 }
 
 nav .mainMenu a:link {
@@ -363,6 +364,7 @@ main {
 .highlight .gallery {
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
   cursor: pointer;
+  transition: 1s ease;
 }
 
 .highlight .text-box {
@@ -385,7 +387,7 @@ img.gallery {
   display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
+  transition: .1s ease;
   backface-visibility: hidden;
 }
 
